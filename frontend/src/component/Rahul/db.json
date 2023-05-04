@@ -1,0 +1,940 @@
+[
+  {
+    "title": "samantha in optic white",
+    "poster": "https://img0.junaroad.com/stories/story_p_6442d0cafd1d3c0e0f24b896-1682584524.jpeg",
+    "profile": "https://img1.junaroad.com/user_profile/32.jpg",
+    "gender": "women",
+    "category": "kurta",
+    "sellerCollection": [
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d88"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18757753/zoom_0-1670408510.jpg",
+        "description": "white kurta pant set with dupatta",
+        "price": 2099,
+        "ogPrice": 4399,
+        "discount": 52,
+        "bySeller": "janasya"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d89"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/17825515/zoom_0-1624960100.jpg",
+        "description": "embroidered a-line kurta",
+        "price": 849,
+        "ogPrice": 1999,
+        "discount": 58,
+        "bySeller": "Span"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d8a"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18961552/zoom_0-1671859814.jpg",
+        "description": "cream kurta pant set with dupatta",
+        "price": 4249,
+        "ogPrice": 7999,
+        "discount": 47,
+        "bySeller": "Divena"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d8b"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18160271/zoom_0-1639497148.jpg",
+        "description": "white cotton kurta palazzo  set",
+        "price": 2099,
+        "ogPrice": 3999,
+        "discount": 48,
+        "bySeller": "Divena"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d8c"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18277823/zoom_0-1645868028.jpg",
+        "description": "white solid straight kurta",
+        "price": 999,
+        "ogPrice": 2499,
+        "discount": 60,
+        "bySeller": "W"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d8d"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18022427/zoom_0-1633446671.jpg",
+        "description": "white viscose kurta palazzo  set",
+        "price": 1749,
+        "ogPrice": 3999,
+        "discount": 56,
+        "bySeller": "Bitterlime"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d8e"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18421221/zoom_0-1656756785.jpg",
+        "description": "white rayon straight kurta",
+        "price": 999,
+        "ogPrice": 1699,
+        "discount": 41,
+        "bySeller": "JUNIPER"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d8f"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18220788/zoom_0-1642511633.jpg",
+        "description": "white rayon kurta palazzo  set",
+        "price": 2149,
+        "ogPrice": 3999,
+        "discount": 46,
+        "bySeller": "Bitterlime"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d90"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18260911/zoom_0-1644594401.jpg",
+        "description": "cream cotton blend kurta palazzo  set",
+        "price": 2549,
+        "ogPrice": 6440,
+        "discount": 60,
+        "bySeller": "SHOWOFF"
+      },
+      {
+        "_id": {
+          "$oid": "645282de07d8fdee9bed8d91"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18319457/zoom_0-1649055626.jpg",
+        "description": "white cotton blend straight kurta",
+        "price": 599,
+        "ogPrice": 1499,
+        "discount": 60,
+        "bySeller": "Aurelia"
+      }
+    ],
+    "seller": "Shivangini",
+    "followers": "31K",
+    "likes": 35
+  },
+  {
+    "title": "Bookmark These Sets ASAP",
+    "poster": "https://img0.junaroad.com/stories/story_p_644b409bfd1d3c0e0f324f69-1682664797.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/profile_589be97e335fa407edff6136-1619171943.png",
+    "gender": "women",
+    "category": "kurta",
+    "sellerCollection": [
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8d9e"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18413726/zoom_0-1656310761.jpg",
+        "description": "navy cotton kurta pant  set",
+        "price": 1699,
+        "ogPrice": 2499,
+        "discount": 32,
+        "bySeller": "Highlight Fashion Export"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8d9f"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/19476518/zoom_0-1677943816.jpg",
+        "description": "teal embroidered kurta pant set",
+        "price": 3699,
+        "ogPrice": 6999,
+        "discount": 47,
+        "bySeller": "Divena"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da0"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18324858/zoom_0-1649429546.jpg",
+        "description": "green art silk kurta palazzo  set",
+        "price": 749,
+        "ogPrice": 4999,
+        "discount": 85,
+        "bySeller": "Cottinfab"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da1"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18757788/zoom_0-1670408690.jpg",
+        "description": "yellow kurta pant set with dupatta",
+        "price": 1349,
+        "ogPrice": 3279,
+        "discount": 59,
+        "bySeller": "janasya"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da2"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18757787/zoom_0-1670408689.jpg",
+        "description": "green kurta pant set with dupatta",
+        "price": 1349,
+        "ogPrice": 3679,
+        "discount": 63,
+        "bySeller": "janasya"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da3"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18439949/zoom_0-1658322094.jpg",
+        "description": "printed skirt top set with dupatta",
+        "price": 2099,
+        "ogPrice": 3499,
+        "discount": 40,
+        "bySeller": "JUNIPER"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da4"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18961543/zoom_0-1671859815.jpg",
+        "description": "magenta modal kurta pant  set",
+        "price": 3199,
+        "ogPrice": 5999,
+        "discount": 47,
+        "bySeller": "Divena"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da5"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18413728/zoom_0-1656310761.jpg",
+        "description": "pink cotton kurta pant  set",
+        "price": 1499,
+        "ogPrice": 2499,
+        "discount": 40,
+        "bySeller": "Highlight Fashion Export"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da6"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/19160119/zoom_0-1673352223.jpg",
+        "description": "red art silk kurta sharara  set",
+        "price": 2599,
+        "ogPrice": 5649,
+        "discount": 54,
+        "bySeller": "Cottinfab"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da7"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18413725/zoom_0-1656310761.jpg",
+        "description": "yellow cotton kurta sharara  set",
+        "price": 2099,
+        "ogPrice": 2999,
+        "discount": 30,
+        "bySeller": "Highlight Fashion Export"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da8"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18151180/zoom_0-1639029209.jpg",
+        "description": "red cotton kurta pant  set",
+        "price": 1549,
+        "ogPrice": 2999,
+        "discount": 48,
+        "bySeller": "Highlight Fashion Export"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8da9"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18757731/zoom_0-1670408512.jpg",
+        "description": "beige kurta sharara set with dupatta",
+        "price": 1749,
+        "ogPrice": 4139,
+        "discount": 58,
+        "bySeller": "janasya"
+      },
+      {
+        "_id": {
+          "$oid": "64529d8f07d8fdee9bed8daa"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/17950079/zoom_0-1629895659.jpg",
+        "description": "gold print suit set",
+        "price": 1849,
+        "ogPrice": 4599,
+        "discount": 60,
+        "bySeller": "Aurelia"
+      }
+    ],
+    "seller": "Nikky",
+    "followers": "25K",
+    "likes": 37
+  },
+  {
+    "title": "Sets Perfect For Summers",
+    "poster": "https://img2.junaroad.com/stories/story_p_644b5772b388b00822d1d6ec-1682662648.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/profile_59127c6da7dae86b8216afaa-1678519977.png",
+    "gender": "women",
+    "category": "kurta",
+    "sellerCollection": [],
+    "seller": "Divya N",
+    "followers": "2K",
+    "likes": 1
+  },
+  {
+    "title": "Ace The Ethnic Look | Asymmetric Kurtas",
+    "poster": "https://img2.junaroad.com/stories/story_p_644ea0f4cc8b5e080dc8e0cb-1682924095.jpeg",
+    "profile": "https://img1.junaroad.com/user_profile/profile_5795f141f80c246ada8dc53c-1630860785.png",
+    "gender": "women",
+    "category": "kurta",
+    "sellerCollection": [],
+    "seller": "krunal",
+    "followers": "7K",
+    "likes": 42
+  },
+  {
+    "title": "Pretty Palazzo Sets To Bag",
+    "poster": "https://img3.junaroad.com/stories/story_p_644512a5adb8b83a532b2497-1682315462.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/mid_profile_563a1525149b87358c13e65d-1499138575.png",
+    "gender": "women",
+    "category": "kurta",
+    "sellerCollection": [],
+    "seller": "KRITI",
+    "followers": "14K",
+    "likes": 2
+  },
+  {
+    "title": "Couch To Coast",
+    "poster": "https://img0.junaroad.com/stories/story_p_644f63c6cc8b5e08335f591b-1682934261.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/26.jpg",
+    "gender": "women",
+    "category": "dresses",
+    "sellerCollection": [
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8dac"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/19624702/zoom_0-1680238237.jpg",
+        "description": "multi colored printed top and skirt co-ord set",
+        "bySeller": "Sera",
+        "price": 1449,
+        "ogPrice": 1494,
+        "discount": 3
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8dad"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18513872/zoom_0-1662556118.jpg",
+        "description": "v-neck floral top and trouser set",
+        "bySeller": "",
+        "price": 999,
+        "ogPrice": 3299,
+        "discount": 70
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8dae"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18735140/zoom_0-1670075562.jpg",
+        "description": "blue floral polyester top and skirt set",
+        "bySeller": "SHOWOFF",
+        "price": 1949,
+        "ogPrice": 4970,
+        "discount": 61
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8daf"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18446989/zoom_0-1658835103.jpg",
+        "description": "peach floral crop top & side slit skirt set",
+        "bySeller": "",
+        "price": 1549,
+        "ogPrice": 3698,
+        "discount": 58
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8db0"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18575183/zoom_0-1665412390.jpg",
+        "description": "floral crop top with bodycon skirt",
+        "bySeller": "Trend Arrest",
+        "price": 799,
+        "ogPrice": 1999,
+        "discount": 60
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8db1"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18079723/zoom_0-1637224413.jpg",
+        "description": "floral top pants set",
+        "bySeller": "Mode Connection",
+        "price": 1649,
+        "ogPrice": 4999,
+        "discount": 67
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8db2"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/19639072/zoom_0-1680503326.jpg",
+        "description": "cami neck printed top and shorts set co-ord",
+        "bySeller": "Clovia",
+        "price": 849,
+        "ogPrice": 2249,
+        "discount": 62
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8db3"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18446977/zoom_0-1658835102.jpg",
+        "description": "pink floral crop top & trouser set",
+        "bySeller": "",
+        "price": 1249,
+        "ogPrice": 2798,
+        "discount": 55
+      },
+      {
+        "_id": {
+          "$oid": "6452a06407d8fdee9bed8db4"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18403672/zoom_0-1655298661.jpg",
+        "description": "round neck floral top with shorts set",
+        "bySeller": "",
+        "price": 449,
+        "ogPrice": 1299,
+        "discount": 65
+      }
+    ],
+    "seller": "ankita",
+    "followers": "3K",
+    "likes": 5
+  },
+  {
+    "title": "For Your Mental Holidays",
+    "poster": "https://img2.junaroad.com/stories/story_p_64216db8b388b008101368f1-1680009208.jpeg",
+    "profile": "https://img1.junaroad.com/user_profile/32.jpg",
+    "gender": "women",
+    "category": "dresses",
+    "sellerCollection": [],
+    "seller": "Shivangini",
+    "followers": "31K",
+    "likes": 12
+  },
+  {
+    "title": "Wedding Wardrobe Worthy | Dresses",
+    "poster": "https://img0.junaroad.com/stories/story_p_644e2c6213cb380810a16422-1682924575.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/profile_5b55d97486934e71890be578-1597052991.png",
+    "gender": "women",
+    "category": "dresses",
+    "sellerCollection": [],
+    "seller": "POOJA",
+    "followers": "5K",
+    "likes": 5
+  },
+  {
+    "title": "Alluring Anarkali Dresses",
+    "poster": "https://img2.junaroad.com/stories/story_p_644915accc8b5e082e864b47-1682595931.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/mid_profile_563a1525149b87358c13e65d-1499138575.png",
+    "gender": "women",
+    "category": "dresses",
+    "sellerCollection": [],
+    "seller": "KRITI",
+    "followers": "14K",
+    "likes": 1
+  },
+
+  {
+    "title": "Slip Into The Best Picks",
+    "poster": "https://img0.junaroad.com/stories/story_p_644a388dadb8b83a5333f5b8-1682593948.jpeg",
+    "profile": "https://img1.junaroad.com/user_profile/32.jpg",
+    "gender": "women",
+    "category": "sarees",
+    "sellerCollection": [
+      {
+        "_id": {
+          "$oid": "6452a2f207d8fdee9bed8db6"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18870051/zoom_0-1671024773.jpg",
+        "description": "offwhite organza printed saree with blouse",
+        "price": 999,
+        "ogPrice": 2375,
+        "discount": 58,
+        "bySeller": "SHEETAL"
+      },
+      {
+        "_id": {
+          "$oid": "6452a2f207d8fdee9bed8db7"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18421664/zoom_0-1656947553.jpg",
+        "description": "green organza printed saree with blouse",
+        "price": 1549,
+        "ogPrice": 3745,
+        "discount": 59,
+        "bySeller": "PRIYA"
+      },
+      {
+        "_id": {
+          "$oid": "6452a2f207d8fdee9bed8db8"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/19473743/zoom_0-1678101799.jpg",
+        "description": "self design florals printed saree with blouse",
+        "price": 999,
+        "ogPrice": 3330,
+        "discount": 70,
+        "bySeller": "RIVA"
+      },
+      {
+        "_id": {
+          "$oid": "6452a2f207d8fdee9bed8db9"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/18642793/zoom_0-1668069698.jpg",
+        "description": "floral print organza saree with blouse",
+        "price": 1699,
+        "ogPrice": 8499,
+        "discount": 80,
+        "bySeller": "KUMKUM"
+      },
+      {
+        "_id": {
+          "$oid": "6452a2f207d8fdee9bed8dba"
+        },
+        "image": "https://img3.junaroad.com/uiproducts/17451671/zoom_0-1608378569.jpg",
+        "description": "floral printed saree with blouse",
+        "price": 999,
+        "ogPrice": 1919,
+        "discount": 48,
+        "bySeller": "shaily"
+      }
+    ],
+    "seller": "Shivangini",
+    "followers": "31K",
+    "likes": 12
+  },
+  {
+    "title": "Colour Edit | Blue Lehenga Sets",
+    "poster": "https://img0.junaroad.com/stories/story_p_644b56a9f38057082afe6d92-1682662283.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/profile_59127c6da7dae86b8216afaa-1678519977.png",
+    "gender": "women",
+    "category": "sarees",
+    "sellerCollection": [],
+    "seller": "Divya N",
+    "followers": "2K",
+    "likes": 10
+  },
+  {
+    "title": "Classy Woven Sarees To Bag",
+    "poster": "https://img2.junaroad.com/stories/story_p_644a7664cc8b5e08111ee8e0-1682662944.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/mid_profile_563a1525149b87358c13e65d-1499138575.png",
+    "gender": "women",
+    "category": "sarees",
+    "sellerCollection": [],
+    "seller": "KRITI",
+    "followers": "14K",
+    "likes": 4
+  },
+  {
+    "title": "Slay In Solid | Sarees",
+    "poster": "https://img3.junaroad.com/stories/story_p_644b594bb388b00822d1db04-1682924854.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/profile_5b55d97486934e71890be578-1597052991.png",
+    "gender": "women",
+    "category": "sarees",
+    "sellerCollection": [],
+    "seller": "POOJA",
+    "followers": "5K",
+    "likes": 3
+  },
+  {
+    "title": "Flaunt Some Abstract Prints | Sarees",
+    "poster": "https://img0.junaroad.com/stories/story_p_644f03fdadb8b808094c1eb2-1682924076.jpeg",
+    "profile": "https://img1.junaroad.com/user_profile/profile_5795f141f80c246ada8dc53c-1630860785.png",
+    "gender": "women",
+    "category": "sarees",
+    "sellerCollection": [],
+    "seller": "krunal",
+    "followers": "7K",
+    "likes": 1
+  },
+  {
+    "title": "Must-Have Shirts And Jeans",
+    "poster": "https://img0.junaroad.com/stories/story_p_644fbf9513cb3869e5a99c68-1682950348.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/mid_profile_5e0dd26e6f4a945d2dad2652-1577965834.png",
+    "gender":"mens",
+    "category": "shirts",
+    "sellerCollection": [
+      {
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbc"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19208091/zoom_0-1674302467.jpg",
+      "description": "beige cotton casual shirt",
+      "price": 1249,
+      "bySeller": "SHOWOFF",
+      "ogPrice": 3120,
+      "discount": 60
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbd"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19435834/zoom_0-1677648217.jpg",
+      "description": "blue denim washed jeans",
+      "price": 1999,
+      "bySeller": "Canary London",
+      "ogPrice": 3699,
+      "discount": 46
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbe"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19143624/zoom_0-1673108192.jpg",
+      "description": "black coloured casual shirt",
+      "price": 799,
+      "bySeller": "Jainish",
+      "ogPrice": 2199,
+      "discount": 64
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbf"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19087930/zoom_0-1672752620.jpg",
+      "description": "mid rise light washed jeans",
+      "price": 1799,
+      "bySeller": "Mufti",
+      "ogPrice": 3699,
+      "discount": 51
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc0"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19435132/zoom_0-1677648522.jpg",
+      "description": "blue light washed denim jean",
+      "price": 2699,
+      "bySeller": "CRIMSOUNE CLUB",
+      "ogPrice": "",
+      "discount": ""
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc1"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/18743586/zoom_0-1669985342.jpg",
+      "description": "mens blue washed jean",
+      "price": 2249,
+      "bySeller": "Red Chief",
+      "ogPrice": 4999,
+      "discount": 55
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc2"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/18870226/zoom_0-1671024322.jpg",
+      "description": "mid rise light washed denim jeans",
+      "price": 2599,
+      "bySeller": "USPA",
+      "ogPrice": 3499,
+      "discount": 26
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc3"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/18336470/zoom_0-1650094653.jpg",
+      "description": "blue solid washed jean",
+      "price": 1649,
+      "bySeller": "Arrow Sport",
+      "ogPrice": 2999,
+      "discount": 45
+    }],
+    "seller": "kanika.crystal",
+    "followers": "32K",
+    "likes": 6
+  },
+                                                              {
+    "title": "Fashion Is Freedom | Check Shirts",
+    "poster": "https://img0.junaroad.com/stories/story_p_644a7114fd1d3c0e0f315cd8-1682765507.jpeg",
+    "profile": "https://img0.junaroad.com/user_profile/34.jpg",
+    "gender":"mens",
+    "category": "shirts",
+    "sellerCollection": [
+      {
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbc"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19208091/zoom_0-1674302467.jpg",
+      "description": "beige cotton casual shirt",
+      "price": 1249,
+      "bySeller": "SHOWOFF",
+      "ogPrice": 3120,
+      "discount": 60
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbd"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19435834/zoom_0-1677648217.jpg",
+      "description": "blue denim washed jeans",
+      "price": 1999,
+      "bySeller": "Canary London",
+      "ogPrice": 3699,
+      "discount": 46
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbe"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19143624/zoom_0-1673108192.jpg",
+      "description": "black coloured casual shirt",
+      "price": 799,
+      "bySeller": "Jainish",
+      "ogPrice": 2199,
+      "discount": 64
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dbf"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19087930/zoom_0-1672752620.jpg",
+      "description": "mid rise light washed jeans",
+      "price": 1799,
+      "bySeller": "Mufti",
+      "ogPrice": 3699,
+      "discount": 51
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc0"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/19435132/zoom_0-1677648522.jpg",
+      "description": "blue light washed denim jean",
+      "price": 2699,
+      "bySeller": "CRIMSOUNE CLUB",
+      "ogPrice": "",
+      "discount": ""
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc1"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/18743586/zoom_0-1669985342.jpg",
+      "description": "mens blue washed jean",
+      "price": 2249,
+      "bySeller": "Red Chief",
+      "ogPrice": 4999,
+      "discount": 55
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc2"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/18870226/zoom_0-1671024322.jpg",
+      "description": "mid rise light washed denim jeans",
+      "price": 2599,
+      "bySeller": "USPA",
+      "ogPrice": 3499,
+      "discount": 26
+    },{
+      "_id": {
+        "$oid": "6452a66007d8fdee9bed8dc3"
+      },
+      "image": "https://img3.junaroad.com/uiproducts/18336470/zoom_0-1650094653.jpg",
+      "description": "blue solid washed jean",
+      "price": 1649,
+      "bySeller": "Arrow Sport",
+      "ogPrice": 2999,
+      "discount": 45
+    }],
+    "seller": "KIRAN",
+    "followers": "5K",
+    "likes": 41
+  },
+                 {
+    "title": "Printed Picks | Summer Shirts",
+    "poster": "https://img0.junaroad.com/stories/story_p_644e4af7f47b700814787129-1682852599.jpeg",
+    "profile": "https://img1.junaroad.com/user_profile/profile_5bc2c83aae31d51e168def3b-1642498931.png",
+    "gender":"mens",
+    "category": "shirts",
+    "sellerCollection": [],
+    "seller": "Poonam",
+    "followers": "2K",
+    "likes": 7
+  },
+  {
+      "title": "OOTD Got Cooler",
+      "poster": "https://img0.junaroad.com/stories/story_p_644a2447b388b0081555ec43-1682947093.jpeg",
+      "profile": "https://img0.junaroad.com/user_profile/mid_profile_5e0dd26e6f4a945d2dad2652-1577965834.png",
+       "gender":"mens",
+       "category": "ethnicMen",
+       "sellerCollection": [],
+      "seller": "kanika.crystal",
+      "followers": "32K",
+      "likes": 1
+    },
+    {
+      "title": "Occassion Look Kurtas",
+      "poster": "https://img0.junaroad.com/stories/story_p_644f2b0dadb8b808094c5f0e-1682935415.jpeg",
+      "profile": "https://img1.junaroad.com/user_profile/profile_5bc2c83aae31d51e168def3b-1642498931.png",
+            "category": "ethnicMen",
+            "sellerCollection": [],
+            "gender":"mens",
+      "seller": "Poonam",
+      "followers": "2K",
+      "likes": 5
+    },
+    {
+      "title": "Summer Wear Look | Kurta Sets",
+      "poster": "https://img2.junaroad.com/stories/story_p_64415be8b388b008145a47ab-1682314286.jpeg",
+      "profile": "https://img1.junaroad.com/user_profile/mid_profile_57b1dae6a7dae811315a1874-1482341113.png",
+            "sellerCollection": [],
+            "category": "ethnicMen",
+            "gender":"mens",
+      "seller": "lavika",
+      "followers": "10K",
+      "likes": 4
+    },
+    {
+      "title": "Up-And-Coming Picks",
+      "poster": "https://img0.junaroad.com/stories/story_p_64464850f3805708157dce80-1682332158.jpeg",
+      "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+      "gender": "mens",
+      "category": "footwear",
+      "sellerCollection": [],
+      "seller": "anujabofficial",
+      "followers": 938,
+      "likes": 7
+    },
+    {
+      "title": "Speed Up Running Footwear",
+      "poster": "https://img0.junaroad.com/stories/story_p_644bf1defd1d3c58d5b8688e-1682698718.jpeg",
+      "profile": "https://img1.junaroad.com/user_profile/profile_59b1942fa7dae85a555997bc-1637247593.png",
+      "gender": "mens",
+      "category": "footwear",
+      "sellerCollection": [],
+      "seller": "Anshu",
+      "followers": "2K",
+      "likes": 1
+    },
+    {
+      "title": "Ready To Walk | Sport Shoes",
+      "poster": "https://img0.junaroad.com/stories/story_p_64438f9bb388b0081ee5c313-1682149275.jpeg",
+      "profile": "https://img1.junaroad.com/user_profile/mid_profile_59228e5b335fa4082561cd53-1540215473.png",
+      "gender": "mens",
+      "category": "footwear",
+      "sellerCollection": [],
+      "seller": "Triveni",
+      "followers": "2K",
+      "likes": 1
+    },
+    {
+      "title": "Canvas Edit | Sneakers",
+      "poster": "https://img2.junaroad.com/stories/story_p_64394b69fd1d3c2b3fd37f51-1681476457.jpeg",
+      "profile": "https://img0.junaroad.com/user_profile/mid_profile_563a1525149b87358c13e65d-1499138575.png",
+      "gender": "mens",
+      "category": "footwear",
+      "sellerCollection": [],
+      "seller": "KRITI",
+      "followers": "14K",
+      "likes": 5
+    },
+    {
+        "title": "Elevated Basics Ft. Emraan Hashmi",
+        "poster": "https://img0.junaroad.com/stories/story_p_644f67faadb8b808094cdc95-1682942535.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "anujabofficial",
+        "followers": 938,
+        "likes": 4
+      },
+      {
+        "title": "Pin Arjun's Style",
+        "poster": "https://img2.junaroad.com/stories/story_p_64410017f47b700824257326-1681982813.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "Karan",
+        "followers": 938,
+        "likes": 10
+      },
+      {
+        "title": "Pay Attention Boys",
+        "poster": "https://img0.junaroad.com/stories/story_p_6446cee9adb8b83a532e22d6-1682362782.jpeg",
+        "profile": "https://img1.junaroad.com/user_profile/profile_5e576e5ffd1d3c6973316fc7-1652968665.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "Gaurika",
+        "followers": 649,
+        "likes": 5
+      },
+      {
+        "title": "Celeb-Style | #WorkLeisure",
+        "poster": "https://img2.junaroad.com/stories/story_p_642ffce8fd1d3c7b703184a2-1682597169.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "Kunal",
+        "followers": 938,
+        "likes": 5
+      },
+      {
+        "title": "Pooja Going All Sleek!",
+        "poster": "https://img3.junaroad.com/stories/story_p_64262424adb8b878de782b0c-1680682592.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "Sidhharth",
+        "followers": 938,
+        "likes": 10
+      },
+      {
+        "title": "Boost Your Basics",
+        "poster": "https://img0.junaroad.com/stories/story_p_640a34b9adb8b86e22ae2dc0-1682600493.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "santosh",
+        "followers": 938,
+        "likes": 11
+      },
+      {
+        "title": "Black Watches | #YouthEssentials",
+        "poster": "https://img2.junaroad.com/stories/story_p_64119d8c13cb38082b622d5b-1682561784.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "Kushwah",
+        "followers": 938,
+        "likes": 44
+      },
+      {
+        "title": "Power Up Your Work Look",
+        "poster": "https://img3.junaroad.com/stories/story_p_640e6f85adb8b86e22b46951-1678668111.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "Rahul",
+        "followers": 938,
+        "likes": 17
+      },
+      {
+        "title": "Square Watches Creating Buzz",
+        "poster": "https://img0.junaroad.com/stories/story_p_63fc973acc8b5e08238e2656-1679116325.jpeg",
+        "profile": "https://img0.junaroad.com/user_profile/profile_61b092d713cb380813ff39f9-1683114595.png",
+        "gender": "both",
+        "category": "accessories",
+        "sellerCollection" : [] ,
+        "seller": "Singh",
+        "followers": 938,
+        "likes": 17
+      }
+  
+]
