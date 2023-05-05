@@ -6,85 +6,18 @@ const dataRoute=express.Router()
 
 
 //read kurta data
-dataRoute.get("/kurta",async(req,res)=>{
+dataRoute.get("/",async(req,res)=>{
+    const query=req.query;
+    // console.log(query);
     try {
-        const kurtas= await FashionDataModel.find({category:"kurta"})
-        res.send(kurtas)
-        
-    } catch (error) {
-        res.send(error)
-    }
-})
-//read dresses data
-dataRoute.get("/dresses",async(req,res)=>{
-    try {
-        const dresses= await FashionDataModel.find({category:"dresses"})
-        res.send(dresses)
-        
-    } catch (error) {
-        res.send(error)
-    }
-})
-//read sarees data
-dataRoute.get("/sarees",async(req,res)=>{
-    try {
-        const sarees= await FashionDataModel.find({category:"sarees"})
-        res.send(sarees)
-        
-    } catch (error) {
-        res.send(error)
-    }
-})
-//read accessories data
-dataRoute.get("/accessories",async(req,res)=>{
-    try {
-        const sarees= await FashionDataModel.find({category:"accessories"})
-        res.send(sarees)
-        
-    } catch (error) {
-        res.send(error)
-    }
-})
-//read footwear data
-dataRoute.get("/footwear",async(req,res)=>{
-    try {
-        const sarees= await FashionDataModel.find({category:"footwear"})
-        res.send(sarees)
-        
-    } catch (error) {
-        res.send(error)
-    }
-})
-//read shirts data
-dataRoute.get("/shirts",async(req,res)=>{
-    try {
-        const sarees= await FashionDataModel.find({category:"shirts"})
-        res.send(sarees)
-        
-    } catch (error) {
-        res.send(error)
-    }
-})
-//read ethnicMen data
-dataRoute.get("/ethnicMen",async(req,res)=>{
-    try {
-        const sarees= await FashionDataModel.find({category:"ethnicMen"})
-        res.send(sarees)
-        
-    } catch (error) {
-        res.send(error)
-    }
-})
-//read shivangini data
-dataRoute.get("/seller/shivangini",async(req,res)=>{
-    try {
-        const data= await FashionDataModel.find({seller:"Shivangini"})
+        const data= await FashionDataModel.find({category:query.occasion})
         res.send(data)
         
     } catch (error) {
         res.send(error)
     }
 })
+
 //read nikky data
 dataRoute.get("/seller/nikky",async(req,res)=>{
     try {

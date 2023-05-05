@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use("/users",userRoute);
 app.use("/admin", adminRouter);
-app.use("/occasion",dataRoute);
+app.use("/",dataRoute);
 
 app.listen(process.env.port,async()=>{
     try {
