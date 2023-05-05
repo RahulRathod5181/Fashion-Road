@@ -13,19 +13,22 @@ import {
   Text,
   useColorModeValue,
   useToast,
+  Select,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 
 const initialState = {
-  fristName: "",
-  lastName: "",
+  name: "",
+  age: "",
+  position: "",
   email: "",
+  gender: "",
   password: "",
 };
 
-export default function Signup() {
+export default function AdminSignup() {
   const [showPassword, setShowPassword] = useState(false);
   const [formState, setFormState] = useState(initialState);
   const toast = useToast();
@@ -41,7 +44,7 @@ export default function Signup() {
   //!THIS IS HANDLE SUBMIT FUNCTION ONLY
   const handleSubmit = (e) => {
     // ! CHEAKING IF NAME FIELD IS NOT EMPTY
-    if (formState.fristName === "" || formState.lastName === "") {
+    if (formState.name === "" || formState.age === "") {
       toast({
         title: "Please Fill The Form",
         position: positions,
@@ -91,7 +94,7 @@ export default function Signup() {
             Sign up
           </Heading>
           <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy shopping ✌️
+            To Admin Dashboard ✌️
           </Text>
         </Stack>
         <Box
@@ -107,24 +110,45 @@ export default function Signup() {
                   <FormLabel>First Name</FormLabel>
                   <Input
                     type="text"
-                    name="fristName"
-                    value={formState.fristName}
+                    name="name"
+                    value={formState.name}
                     onChange={handleChange}
                   />
                 </FormControl>
               </Box>
               <Box>
                 <FormControl id="lastName" isRequired>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel>Age</FormLabel>
                   <Input
-                    type="text"
-                    name="lastName"
-                    value={formState.lastName}
+                    type="number"
+                    name="age"
+                    value={formState.age}
                     onChange={handleChange}
                   />
                 </FormControl>
               </Box>
             </HStack>
+            <FormControl id="firstName" isRequired>
+              <FormLabel>Position</FormLabel>
+              <Input
+                type="text"
+                name="position"
+                value={formState.position}
+                onChange={handleChange}
+              />
+            </FormControl>
+            <FormControl id="firstName" isRequired>
+              <FormLabel>Gender</FormLabel>
+              <Select
+                placeholder="Select"
+                name="gender"
+                onChange={handleChange}
+              >
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </Select>
+            </FormControl>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
               <Input
@@ -172,7 +196,7 @@ export default function Signup() {
             <Stack pt={6}>
               <Text align={"center"}>
                 Already a user?{" "}
-                <Link to="/login" style={{ color: "blue" }}>
+                <Link to="/adminlogin" style={{ color: "blue" }}>
                   Login
                 </Link>
               </Text>
