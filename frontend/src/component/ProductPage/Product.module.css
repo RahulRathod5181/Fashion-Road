@@ -1,0 +1,38 @@
+
+
+.main{
+    width:99%;
+    border:1px solid chartreuse;
+    display: flex;
+    gap:5px;
+    margin: auto;
+}
+
+.left{
+    width:17%;
+    border:1px solid darkblue
+}
+
+.left div:nth-child(1){
+    border: 1px solid aqua;
+
+    margin-bottom: 10px;
+}
+.left div:nth-child(2){
+    border: 1px solid darkmagenta;
+
+    margin-bottom: 5px;
+}
+
+.right{
+    width:75%;
+    margin: auto;
+    margin-top: 35px;
+    border:1px solid rebeccapurple;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px
+}
+.productCard{
+    border: 1px solid firebrick;
+}
