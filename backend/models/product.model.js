@@ -7,6 +7,7 @@ const productSchema = mongoose.Schema({
     Price:{type:Number,required:true},
     ogPrice: {type:Number,required:true},
     discount: {type:Number,required:true},
+    title:{type:String,required:true},
     brand: {type:String,required:true},
     gender: {type:String,required:true}
 });
