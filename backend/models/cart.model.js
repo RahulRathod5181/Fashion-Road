@@ -1,18 +1,17 @@
 const mongoose = require("mongoose");
 
 const cartSchema = mongoose.Schema({
-  images: Array,
-  brand: String,
-  title: String,
-  discounted_price: String,
-  category: String,
-  discount: String,
-  id: String,
-  rating: String,
-  rating_count: String,
-  size: Array,
-  strike_price: String,
-  userID: String,
+  image: {type:String,required:true},
+  offerType: {type:String,required:true},
+  Price:{type:Number,required:true},
+  ogPrice: {type:Number,required:true},
+  discount: {type:Number,required:true},
+  title:{type:String,required:true},
+  brand: {type:String,required:true},
+  gender: {type:String,required:true},
+  userID: {type:String,required:true},
+  firstName:{type:String,required:true},
+  lastName:{type:String,required:true},
 });
 
 const cartModel = mongoose.model("cart", cartSchema);

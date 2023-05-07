@@ -7,13 +7,22 @@ const userRoute=express.Router()
 //user register create
 
 userRoute.post("/register",async(req,res)=>{
-    const {name,password,email}=req.body
+    const {firstName,lastName,password,email}=req.body
+
+
     try {
-        bcrypt.hash(password, 5, (err, hash) =>{
-            const user= new UserModel({name,email,password:hash})
-            user.save();
-            res.send("Registration successfull")
-        });
+            const exist=await UserModel.findOne({email})
+            if(exist){
+                res.status(400).send({"msg":"Email already exist!"})
+            }else{
+
+                bcrypt.hash(password, 5, (err, hash) =>{
+                    const user= new UserModel({firstName,lastName,email,password:hash})
+                    user.save();
+                    res.send("Registration successfull")
+                });
+            }
+
         
     } catch (error) {
         res.send(error)
@@ -25,11 +34,12 @@ userRoute.post("/register",async(req,res)=>{
 userRoute.post("/login",async(req,res)=>{
     const {password,email}=req.body
         const user=await UserModel.findOne({email})
+        // console.log(user);
         if(user){
             try {
                 bcrypt.compare(password, user.password, (err, result)=> {
                    if(result){
-                    const token=jwt.sign({ user: user.name,userID:user._id }, "finicky")
+                    const token=jwt.sign({firstName: user.firstName,lastName:user.lastName,userID:user._id }, "users")
                         res.send({"msg":"login successful","token":token})
                       
                    }else{
