@@ -19,12 +19,12 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/users",userRoute);
-app.use("/admin", adminRouter);
 app.use("/",dataRoute);
 app.use("/products",productRoute)
 
-app.use(auth);
 app.use("/cart", cartRouter);
+app.use(auth);
+app.use("/admin", adminRouter);
 
 app.listen(process.env.port,async()=>{
     try {

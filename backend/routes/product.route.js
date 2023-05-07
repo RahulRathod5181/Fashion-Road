@@ -1,5 +1,6 @@
 const express=require("express");
 const {ProductModel}=require("../models/product.model");
+const {auth}=require("../middlewares/auth.middleware")
 const productRoute=express.Router()
 
 //read  mens
@@ -104,6 +105,8 @@ productRoute.get("/womens",async(req,res)=>{
     }
 })
 
+
+productRoute.use(auth)
 //create
 productRoute.post("/addProduct",async(req,res)=>{
     try {

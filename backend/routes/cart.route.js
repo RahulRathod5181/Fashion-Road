@@ -1,8 +1,10 @@
 const express = require("express");
 const { cartModel } = require("../models/cart.model");
-
+const {userAuth}=require("../middlewares/users.middlewares")
+const {ProductModel}=require("../models/product.model");
 const cartRouter = express.Router();
 
+cartRouter.use(userAuth)
 //getting all the products
 cartRouter.get("/", async (req, res) => {
   const { userID } = req.body;
@@ -20,31 +22,49 @@ cartRouter.post("/add", async (req, res) => {
   try {
     const post = new cartModel(payload);
     await post.save();
-    res.status(200).send({ "msg": "A new post has been posted" });
+    res.status(200).send({ "msg": "A new product has been added to cart" });
   } catch (error) {
-    res.status(400).send({ "msg": error.message });
+    res.status(400).send(error);
   }
 });
 
 //update a data in the cart page
-cartRouter.patch("/update/:userID", async (req, res) => {
-  let { userID } = req.params;
+cartRouter.patch("/update/:id", async (req, res) => {
+  let { id } = req.params;
+  const cartItem=await cartModel.findOne({_id:id})
   try {
-    await cartModel.findByIdAndUpdate({ _id: userID });
-    res.status(200).send({ "msg": `user ${userID} has been updated` });
+
+      if(req.body.userID==cartItem.userID){
+
+        await cartModel.findByIdAndUpdate({ _id: id },req.body);
+        res.status(200).send({ "msg": `product ${id} has been updated` });
+      }else{
+        res.status(400). send({"msg":"You are not authenticate!"})
+      }
+
+
   } catch (error) {
-    res.status(404).send({ "msg": error.message });
+    res.status(404).send(error);
   }
 });
 
 //delete a data from the cart
-cartRouter.delete("/delete/:userID", async (req, res) => {
-  let { userID } = req.params;
+cartRouter.delete("/delete/:id", async (req, res) => {
+  let { id } = req.params;
+  const cartItem=await cartModel.findOne({_id:id})
   try {
-    await cartModel.findByIdAndDelete({ _id: userID });
-    res.status(200).send({ msg: `user ${userID} has been delete` });
+
+      if(req.body.userID==cartItem.userID){
+
+        await cartModel.findByIdAndDelete({ _id: id });
+        res.status(200).send({ "msg": `product ${id} has been deleted` });
+      }else{
+        res.status(400). send({"msg":"You are not authenticate!"})
+      }
+
+
   } catch (error) {
-    res.status(404).send({ msg: error.message });
+    res.status(404).send(error);
   }
 });
 
