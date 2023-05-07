@@ -1,19 +1,14 @@
 const express=require("express");
-
-const {connection}=require("./config/db")
-const {userRoute}=require("./routes/users.route")
-const {dataRoute}=require("./routes/data.route")
-const app=express();
-app.use(express.json())
-require('dotenv').config()
-app.use("/users",userRoute)
-app.use("/occasion",dataRoute)
-
-const cors = require("cors");
 const {connection}=require("./config/db");
 const {userRoute}=require("./routes/users.route");
+const {dataRoute}=require("./routes/data.route");
 const {adminRouter} = require("./routes/admin.route");
-require('dotenv').config()
+const { cartRouter } = require("./routes/cart.route");
+const { auth } = require("./middlewares/auth.middleware");
+require('dotenv').config();
+const cors = require("cors");
+
+
 
 const app=express();
 app.use(express.json());
@@ -21,7 +16,10 @@ app.use(cors());
 
 app.use("/users",userRoute);
 app.use("/admin", adminRouter);
+app.use("/",dataRoute);
 
+app.use(auth);
+app.use("/cart", cartRouter);
 
 app.listen(process.env.port,async()=>{
     try {
@@ -32,6 +30,8 @@ app.listen(process.env.port,async()=>{
     }
     console.log(`Running at ${process.env.port}`);
 })
+
+
 
 
 
