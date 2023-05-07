@@ -10,7 +10,7 @@
 
 .left{
     width:17%;
-    border:1px solid darkblue
+    border:1px solid darkblue;
 }
 
 .left div:nth-child(1){
@@ -31,7 +31,7 @@
     border:1px solid rebeccapurple;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap:10px
+    gap:10px;
 }
 .productCard{
     border: 1px solid firebrick;
