@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const cartSchema = mongoose.Schema({
   images: Array,
@@ -20,3 +20,5 @@ const cartModel = mongoose.model("cart", cartSchema);
 module.exports = {
     cartModel
 };
+
+
