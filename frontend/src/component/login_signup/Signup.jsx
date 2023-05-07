@@ -40,6 +40,7 @@ export default function Signup() {
 
   //!THIS IS HANDLE SUBMIT FUNCTION ONLY
   const handleSubmit = (e) => {
+    e.preventDefault();
     // ! CHEAKING IF NAME FIELD IS NOT EMPTY
     if (formState.fristName === "" || formState.lastName === "") {
       toast({
