@@ -1,20 +1,27 @@
 import "./App.css";
 import CartEmpty from "./component/Rahul/Cart/CartEmpty";
 import CartPage from "./component/Rahul/Cart/CartPage";
+import AddressForm from "./component/Rahul/PaymentPage/AddressForm";
+import CreditCard from "./component/Rahul/PaymentPage/CreditCard";
+import PaymentPage from "./component/Rahul/PaymentPage/PaymentPage";
+import { textTospeechFun } from "./component/Rahul/VoiceFun";
 import AllRoutes from "./component/utility/AllRoutes";
 import Footer from "./component/utility/Footer";
 
 function App() {
+  
+ 
   return (
 
-    <div className="App" style={{ backgroundColor: "#eeeeee" }}>
-      <AllRoutes />
-      <Footer/>
+    <div className="App">
+      {/* <AllRoutes /> */}
+      {/* <CartEmpty /> */}
+      {/* <CartPage /> */}
+{/* <PaymentPage /> */}
+{/* <CreditCard /> */}
+{/* <AddressForm /> */}
 
-  
-
-
-    </div>
+     </div>
   );
 }
 

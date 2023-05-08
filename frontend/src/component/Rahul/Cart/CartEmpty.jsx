@@ -1,5 +1,5 @@
 
-import { Box, Button, Image, Spacer, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Image,  Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const CartEmpty = () => {
@@ -22,5 +22,4 @@ const CartEmpty = () => {
 export default CartEmpty
 
 
-
-// box-shadow: ;
+ 
