@@ -1,5 +1,5 @@
 **baseURL : *
-https://erin-energetic-chick.cyclic.app*
+https://clumsy-miniskirt-tuna.cyclic.app/*
 
 ### Landing page data endpoint
 1. Ex:
