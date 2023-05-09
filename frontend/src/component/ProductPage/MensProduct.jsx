@@ -9,6 +9,8 @@ import { HiFilter } from 'react-icons/hi';
 import { BiSortAlt2 } from 'react-icons/bi';
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { Spinner } from '@chakra-ui/react'
+import Navbar from '../Navbar/Navbar'
+import SidebarMen from './SiebarMen'
 
 
 
@@ -28,7 +30,8 @@ const Product = () => {
     params: {
       discount: searchParams.getAll("discount"),
       brand: searchParams.getAll("brand"),
-      offers: searchParams.getAll("offers")
+      offers: searchParams.getAll("offers"),
+      price:searchParams.get("price")
     }
   }
 
@@ -42,6 +45,7 @@ const Product = () => {
   return (
 
     <>
+        <Navbar/>
       <div className={styles.main}>
         <div className={styles.left}>
           <div className={styles.count}>
@@ -50,7 +54,8 @@ const Product = () => {
           </div>
           <div>
             <p>Filter & Sort</p>
-            <AccordionSide />
+            {/* <AccordionSide /> */}
+            <SidebarMen/>
           </div>
         </div>
         {isLoading?((< div style={{margin:"auto", marginTop:"20px"}} >  <h2 style={{ fontSize: "24", fontWeight: "bold", letterSpacing: "1px", margin:"auto" }}>Loading...</h2> <Spinner color='#65e6e5' mt={"20px"} size={'xl'} m={"auto"} /></div>)):(!productData.length && !isLoading)?(<h2 style={{ fontSize: "30px", fontWeight: "bold", letterSpacing: "1px", margin:"auto", marginTop:" 50px" }}>No Products Available!!</h2>):(
