@@ -52,7 +52,7 @@ adminRouter.post("/login", async (req, res) => {
             adminID: admin[0]._id,
             exp: Math.floor(Date.now() / 1000) + 60 * 60,
           },
-          "bruce"
+          "admin"
         );
         res.status(200).send({
           "msg": "Login Successfull",

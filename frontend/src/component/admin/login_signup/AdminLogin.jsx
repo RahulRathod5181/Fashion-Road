@@ -14,7 +14,9 @@ import {
     useToast,
   } from "@chakra-ui/react";
   import { useState } from "react";
-  
+  import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { loginData } from "../../../redux/admin/admin login/action";
   const initialState = {
     email: "",
     password: "",
@@ -24,6 +26,16 @@ import {
     const toast = useToast();
     const statuses = ["success", "error", "warning", "info"];
     const positions = ["top"];
+    const navigate = useNavigate();
+    const location = useLocation();
+    const dispatch = useDispatch();
+
+    const { isAuth, token } = useSelector((store) => {
+      return store.userLoginReducer;
+    });
+  
+    // console.log(token)
+    localStorage.setItem("adminToken", JSON.stringify(token));
     //! HANDLECHANGE FUNCTION
   
     const handleChange = (e) => {
@@ -58,7 +70,11 @@ import {
   
         //! ALLCLEAR GO FURTHER
       } else {
-        console.log(formState);
+        // console.log(formState);
+        dispatch(loginData(formState)).then(() => {
+          navigate(location.state, { replace: true });
+        });
+        setFormState(initialState);
         toast({
           title: "Successfully Login",
           position: positions,

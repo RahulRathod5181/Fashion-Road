@@ -1,11 +1,97 @@
-import React from 'react'
+import React, { useState } from "react";
+import {
+  Card,
+  CardBody,
+  Image,
+  Text,
+  Avatar,
+  WrapItem,
+  Flex,
+  Box,
+  color,
+  useToast,
+} from "@chakra-ui/react";
+import { FaHeart, FaRegHeart, FaWhatsapp } from "react-icons/fa";
+const LandingCard = ({ poster, profile, seller, followers, title, price,likes }) => {
+  const toast = useToast()
+  const statuses = [ 'info']
+  const positions = ["top"];
+  const [like, setLike] = useState(true);
 
-const LandingCard = () => {
+  const handleOne = () => {
+    setLike(false);
+    toast({
+      title: "You like the product",
+      position: positions,
+      status: statuses[0],
+      isClosable: true,
+    });
+  };
+  const handleTwo = () => {
+    setLike(true);
+    
+  };
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Card maxW="sm" border={'1px solid black '}>
+      <CardBody>
+        <Text
+          maxBlockSize={5}
+          fontWeight={600}
+          color={"blackAlpha.900"}
+          mb={"3"}
+          textAlign={'center'}
+        >
+          {title}
+        </Text>
+        <Image src={poster} alt="Green double couch with wooden legs" />
+        <Flex mt="3" justifyContent={"space-between"} justifyItems={"center"} >
+          <Box display={"flex"} >
+            {/* THIS IS PROFILE SECTION */}
 
-export default LandingCard
+            <WrapItem>
+              <Avatar size="sm" name="Ryan Florence" src={profile} />{" "}
+            </WrapItem>
+            <Box>
+              {/* THIS IS NAME AND FOLLOWER SECTION */}
+
+              <Text ml={2}>
+                {seller}
+              </Text>
+              <Text ml={2} >
+                {followers} Followers
+              </Text>
+            </Box>
+          </Box>
+          <Box>
+            {/* THIS IS LIKE DISLIKE SECTION */}
+
+            <Text display={"flex"}>
+              {like ? (
+                <FaRegHeart
+                  onClick={handleOne}
+                  color="red"
+                  size={"35px"}
+                  alignSelf={"center"}
+                />
+              ) : (
+                <FaHeart
+                  onClick={handleTwo}
+                  color="red"
+                  size={"35px"}
+                  alignSelf={"center"}
+                  
+                />
+                
+              )}
+              <Box ml={5} >
+              <FaWhatsapp color="green" size={"35px"} alignSelf={"center"} />
+              </Box>
+            </Text>
+          </Box>
+        </Flex>
+      </CardBody>
+    </Card>
+  );
+};
+
+export default LandingCard;

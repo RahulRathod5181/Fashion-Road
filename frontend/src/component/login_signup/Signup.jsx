@@ -17,7 +17,8 @@ import {
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-
+import { useDispatch } from "react-redux";
+import { addUser } from "../../redux/user/user signup/action";
 const initialState = {
   fristName: "",
   lastName: "",
@@ -28,6 +29,7 @@ const initialState = {
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [formState, setFormState] = useState(initialState);
+  const dispatch = useDispatch();
   const toast = useToast();
   const statuses = ["success", "error", "warning", "info"];
   const positions = ["top"];
@@ -40,6 +42,7 @@ export default function Signup() {
 
   //!THIS IS HANDLE SUBMIT FUNCTION ONLY
   const handleSubmit = (e) => {
+    e.preventDefault();
     // ! CHEAKING IF NAME FIELD IS NOT EMPTY
     if (formState.fristName === "" || formState.lastName === "") {
       toast({
@@ -68,7 +71,9 @@ export default function Signup() {
       });
     } else {
       //! ALLCLEAR GO FURTHER
-      console.log(formState);
+      // console.log(formState);
+      dispatch(addUser(formState));
+      setFormState(initialState);
       toast({
         title: "Signup Successfully",
         position: positions,

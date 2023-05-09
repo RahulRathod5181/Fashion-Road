@@ -8,21 +8,20 @@ import OrderSucess from "./component/Rahul/PaymentPage/OrderSucess";
 import PaymentPage from "./component/Rahul/PaymentPage/PaymentPage";
 import { textTospeechFun } from "./component/Rahul/VoiceFun";
 import AllRoutes from "./component/utility/AllRoutes";
+import Footer from "./component/utility/Footer";
 
 function App() {
-  
- 
   return (
     <div className="App">
-      {/* <AllRoutes /> */}
-      {/* <CartEmpty /> */}
+  
       <CartPage />
 <PaymentPage />
-{/* <CreditCard /> */}
-{/* <AddressForm /> */}
-{/* <OrderSucess /> */}
-{/* <DebitCard /> */}
-     </div>
+ 
+ 
+     
+      <AllRoutes />
+      <Footer />
+    </div> 
   );
 }
 

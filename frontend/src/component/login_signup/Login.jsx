@@ -13,7 +13,10 @@ import {
   useColorModeValue,
   useToast,
 } from "@chakra-ui/react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { loginData } from "../../redux/user/user login/action";
 
 const initialState = {
   email: "",
@@ -24,6 +27,22 @@ export default function Login() {
   const toast = useToast();
   const statuses = ["success", "error", "warning", "info"];
   const positions = ["top"];
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const dispatch = useDispatch();
+
+  const { isAuth, token } = useSelector((store) => {
+    return store.userLoginReducer;
+  });
+
+  // console.log(token)
+  localStorage.setItem("userToken", JSON.stringify(token));
+  
+  // if (power === "") {
+  //   isAuth = false;
+  // }
+  // console.log(isAuth);
   //! HANDLECHANGE FUNCTION
 
   const handleChange = (e) => {
@@ -47,7 +66,6 @@ export default function Login() {
       });
 
       // ! CHEAKING PASSSWORD LENGTH IS NOT LESS THAN 8
-
     } else if (formState.password.length < 8) {
       toast({
         title: "Password Is Wrong",
@@ -58,7 +76,11 @@ export default function Login() {
 
       //! ALLCLEAR GO FURTHER
     } else {
-      console.log(formState);
+      dispatch(loginData(formState)).then(() => {
+        navigate(location.state, { replace: true });
+      });
+      // console.log(formState);
+      setFormState(initialState);
       toast({
         title: "Successfully Login",
         position: positions,
