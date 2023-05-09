@@ -6,14 +6,9 @@ import Footer from "./component/utility/Footer";
 
 function App() {
   return (
-
     <div className="App" style={{ backgroundColor: "#eeeeee" }}>
       <AllRoutes />
-      <Footer/>
-
-  
-
-
+      <Footer />
     </div>
   );
 }
