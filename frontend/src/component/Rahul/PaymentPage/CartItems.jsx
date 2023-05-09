@@ -1,7 +1,13 @@
 import { Box, CloseButton, Image, Select, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
-const CartItems = () => {
+const CartItems = ({ Price, brand ,discount  ,firstName  ,gender  ,image  ,lastName  ,offerType  ,ogPrice  ,title  ,userID  ,_id}) => {
+
+
+
+
+
+
   return (
     <Stack
       spacing={"0"}
@@ -18,7 +24,7 @@ const CartItems = () => {
         w={"120px"}
         h={'150px'}
         objectFit={'fill'}
-        src="https://img3.junaroad.com/uiproducts/18374660/pri_125-1652795048.jpg"
+        src={image}
         alt=""
       />
       <Stack 
@@ -30,7 +36,7 @@ const CartItems = () => {
         h={'150px'}
       >
         <Stack  p={"10px 0"}>
-          <Text  fontSize={"15px"}>boys printed full length set</Text>
+          <Text  fontSize={"15px"}>{title}</Text>
            <Text  lineHeight={'5px'} fontSize={"15px"}>quantity : 1</Text>
             <Text >
             size :{" "}

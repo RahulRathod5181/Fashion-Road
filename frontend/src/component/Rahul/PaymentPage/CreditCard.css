@@ -1,6 +1,6 @@
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
-
-
 
 .container * {
   font-family: "Poppins", sans-serif;
@@ -10,12 +10,13 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: uppercase;
-    scale: 0.85
+  text-transform: uppercase; 
+  /* transform:scale(0.85); */
 }
 
 .container {
-  /* width: 100%; */
+  /* border: 1px solid teal; */
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,35 +25,40 @@
 
 .container form {
   background: #fff;
+  /* background: red; */
   border-radius: 5px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  /* padding: 20px; */
-  width: 100%;
-  padding-top: 100px;
+  /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+  
+  padding: 20px;
+  width: 80%;
+  padding-top: 90px;
 }
 
 .container form .inputBox {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .container form .inputBox span {
   display: block;
   color: #999;
-  padding-bottom: 5px;
+font-size:12px;
+  /* padding-bottom: 5px; */
 }
 
 .container form .inputBox input,
 .container form .inputBox select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
+  width: 80%;
+  padding: 2px;
+  border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: #444;
+  font-size:12px;
 }
 
 .container form .flexbox {
   display: flex;
   gap: 15px;
+  width:80%; 
 }
 
 .container form .flexbox .inputBox {
@@ -62,7 +68,8 @@
 .container form .submit-btn {
   width: 100%;
   background: linear-gradient(45deg, blueviolet, deeppink);
-  margin-top: 20px;
+  
+  /* margin-top: 20px; */
   padding: 10px;
   font-size: 20px;
   color: #fff;
@@ -79,15 +86,15 @@
 .container .card-container {
   margin-bottom: -150px;
   position: relative;
-  height: 220px;
-  width: 450px;
-  z-index: 4;
+  height: 250px;
+  width: 400px;
 }
 
 .container .card-container .front {
   position: absolute;
-  /* height: 100%; */
-  width: 100%;
+  width: 90% ;
+  /* height: 300px; */
+  border:1px solid green;
   top: 0;
   left: 0;
   background: linear-gradient(45deg, blueviolet, deeppink);
@@ -97,6 +104,8 @@
   padding: 20px;
   transform: perspective(1000px) rotateY(0deg);
   transition: transform 0.4s ease-out;
+
+  scale:0.8;
 }
 
 .container .card-container .front .image {
@@ -113,9 +122,12 @@
 }
 
 .container .card-container .front .card-number-box {
-  padding: 30px 0;
-  font-size: 22px;
+  padding: 20px 0;
+  width:100%;
+  /* border: 1px solid white; */
+  font-size: 16px;
   color: #fff;
+   
 }
 
 .container .card-container .front .flexbox {
@@ -129,6 +141,7 @@
 .container .card-container .front .flexbox .box {
   font-size: 15px;
   color: #fff;
+  
 }
 
 .container .card-container .back {
@@ -136,19 +149,23 @@
   top: 0;
   left: 0;
   /* height: 100%; */
-  width: 100%;
+  width: 97%;
   background: linear-gradient(45deg, blueviolet, deeppink);
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 20px 0;
   text-align: right;
   backface-visibility: hidden;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   transform: perspective(1000px) rotateY(180deg);
   transition: transform 0.4s ease-out;
+
+  margin-bottom : 10px;
+  scale:0.7;
 }
 
 .container .card-container .back .stripe {
   background: #000;
+  
   width: 100%;
   margin: 10px 0;
   height: 50px;
@@ -160,6 +177,7 @@
 
 .container .card-container .back .box span {
   color: #fff;
+  
   font-size: 15px;
 }
 
@@ -169,6 +187,7 @@
   margin-top: 5px;
   color: #333;
   background: #fff;
+  
   border-radius: 5px;
   width: 100%;
 }
