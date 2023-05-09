@@ -7,7 +7,7 @@ const formatMonth = (x) => (String(x).length === 1 ? `0${x}` : x);
 const formatYear = (x) => x.toString().substring(2, 4);
 const fitlerNumber = (x) => x.replace(/[^0-9]/g, "");
 
-const CreditCard = () => {
+const CreditCard = ({handleFinalSubmit}) => {
   const frontRef = useRef();
   const backRef = useRef();
 
@@ -24,6 +24,8 @@ const CreditCard = () => {
       frontRef.current.style.transform = `perspective(1000px) rotateY(${f}deg)`;
       backRef.current.style.transform = `perspective(1000px) rotateY(${b}deg)`;
     },
+
+
     [frontRef, backRef]
   );
 
@@ -83,7 +85,7 @@ const CreditCard = () => {
 
         {/* form for user input */}
 
-        <form action="">
+        <form action="" >
           <div className="inputBox">
             <span>card number</span>
             <input
@@ -151,12 +153,12 @@ const CreditCard = () => {
                 value={cvv}
                 onChange={(e) => setCvv(fitlerNumber(e.target.value))}
                 type="text"
-                maxLength="4"
+                maxLength="3"
                 className="cvv-input"
               />
             </div>
           </div>
-          <input type="submit" value="submit" className="submit-btn" />
+          {/* <input type="submit" value="submit" className="submit-btn" /> */}
         </form>
       </div>
     </div>

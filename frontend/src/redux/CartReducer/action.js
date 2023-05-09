@@ -6,7 +6,8 @@ import axios from "axios"
 export const getCartProducts = (dispatch)=>{
     dispatch({type:GET_DATA_REQUEST})
 
-    axios.get(`${baseUrl}/cart`)
+    // axios.get(`${baseUrl}/cart`)
+    axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart/dummy`)
     .then((res)=>{
         dispatch({type:GET_DATA,payload:res.data})
     })
