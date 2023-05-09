@@ -1,9 +1,25 @@
 import { Box, Button, Image, Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
+import {useDispatch, useSelector} from "react-redux"
 import CartCard from "./CartCard"; 
+import { getCartProducts } from "../../../redux/CartReducer/action";
 
 const CartPage = () => {
- 
+  const dispatch = useDispatch()
+
+  const {cartData} = useSelector((store)=>{
+    // console.log(store.cartPageReducer)
+    return store.cartPageReducer
+  })
+  console.log(cartData)
+  
+
+useEffect(() => {
+  dispatch(getCartProducts)
+
+}, [])
+
+
 const  rColor = '#d3145a'
   return (
     <Stack spacing={'0'}  overflow={'hidden'} bgColor={"red"} border={'1px solid red'}>
@@ -20,7 +36,7 @@ const  rColor = '#d3145a'
          <CartCard /> 
   
         </Stack>
-        <Stack  p={'2rem 2rem'} w={"48%"}  bgColor={'white'} h={'90vh'} position={'sticky'} top={'10%'} left={'50%'} > 
+        <Stack  p={'2rem 2rem'} w={"48%"}  bgColor={'white'} h={'90vh'} position={'sticky'} top={'8%'} left={'50%'} > 
           <Stack direction={"row"} justify={"space-between"}  >
             <Stack direction={"row"} gap={"10px"}>
               <Image
