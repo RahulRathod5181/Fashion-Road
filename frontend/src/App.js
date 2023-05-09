@@ -6,21 +6,21 @@ import CreditCard from "./component/Rahul/PaymentPage/CreditCard";
 import PaymentPage from "./component/Rahul/PaymentPage/PaymentPage";
 import { textTospeechFun } from "./component/Rahul/VoiceFun";
 import AllRoutes from "./component/utility/AllRoutes";
+import Footer from "./component/utility/Footer";
 
 function App() {
-  
- 
+
   return (
-    <div className="App">
-      {/* <AllRoutes /> */}
+    <div className="App" >
+       
       {/* <CartEmpty /> */}
       {/* <CartPage /> */}
 {/* <PaymentPage /> */}
 {/* <CreditCard /> */}
 {/* <AddressForm /> */}
-
-     </div>
-  );
+      <AllRoutes />
+      <Footer />
+    </div>
 }
 
 export default App;

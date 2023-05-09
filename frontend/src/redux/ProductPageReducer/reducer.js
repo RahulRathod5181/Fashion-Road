@@ -16,6 +16,6 @@ export const reducer = (state=initialState,{type,payload})=>{
         case GET_DATA_ERROR:
             return {...state,isLaoding:false, isError:true};
         default:
-            return state
+            return state;
     }
 }
