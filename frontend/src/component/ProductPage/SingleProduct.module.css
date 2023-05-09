@@ -9,9 +9,10 @@
 .main{
     width:85%;
     display: flex;
+    
     margin: auto;
     gap: 100px;
-    margin-top: 20px;
+    margin-top: 90px;
 }
 
 .left{
@@ -346,4 +347,7 @@
     color: #666666;
     margin-bottom: 12px;
 }
+
+
+
 

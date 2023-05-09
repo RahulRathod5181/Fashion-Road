@@ -1,3 +1,6 @@
+
+
+
 import {
     Accordion,
     AccordionItem,
@@ -15,8 +18,8 @@ import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 
 
-const AccordionSide = () => {
-    const data = ['Scakhi', 'Fashionuma', 'A R Slik', 'Azira', 'Amaze', 'Aspire', 'mylookup', 'Cottinfab', 'Momin Libas', 'JUNIPER', 'Fashion Basket', 'janasya', 'Keshav Creation', 'Soch']
+const SidebarMen = () => {
+    const data = ['Tahvo', 'Veera Paridhaan', 'Canary London', 'Austin Wood', 'Inspire', 'Status Quo', 'Raa Jeans', 'SHOWOFF', 'Ragzo', 'CAMEY'];
 
     const { productData } = useSelector((store) => {
         // console.log(store)
@@ -216,4 +219,4 @@ const AccordionSide = () => {
     )
 }
 
-export default AccordionSide;
+export default SidebarMen;
