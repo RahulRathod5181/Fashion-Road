@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { getProduct, getProductWomen } from '../../redux/ProductPageReducer/action'
+import {getProductMen } from '../../redux/ProductPageReducer/action'
 import styles from "./Product.module.css"
 import AccordionSide from './Accordion'
 import { AiOutlineHeart } from 'react-icons/ai';
@@ -33,7 +33,7 @@ const Product = () => {
   }
 
   useEffect(() => {
-    dispatch(getProductWomen(obj));
+    dispatch(getProductMen(obj));
     setCount((prev) => prev = productData.length)
   }, [location.search, productData.length])
 
