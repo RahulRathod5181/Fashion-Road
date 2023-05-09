@@ -7,13 +7,17 @@ import {
   Input,
   Heading,
   useToast,
+  Select,
 } from "@chakra-ui/react";
+import AdminNavbar from "../navbar/Navbar";
 const initialState = {
   image: "",
-  price: "",
+  Price: "",
   discount: "",
   ogPrice: "",
   brand: "",
+  gender: "",
+  title: "",
 };
 const Addproduct = () => {
   const [formState, setFormState] = useState(initialState);
@@ -31,7 +35,6 @@ const Addproduct = () => {
     // ! CHEAKING IF  FIELD IS NOT EMPTY
     if (
       formState.image === "" ||
-      formState.price === "" ||
       formState.ogPrice === "" ||
       formState.discount === "" ||
       formState.brand === ""
@@ -45,8 +48,7 @@ const Addproduct = () => {
     } else {
       //! ALLCLEAR GO FURTHER
       console.log(formState);
-      const price = formState.ogPrice-(formState.ogPrice * formState.discount) /100
-      console.log(price) 
+
       toast({
         title: " Product Added Successfully",
         position: positions,
@@ -56,25 +58,38 @@ const Addproduct = () => {
     }
   };
   return (
+    <>
+    <AdminNavbar/>
     <Container
       maxW="container.md"
       border="1px"
       borderColor="gray.400"
-      backgroundColor={"white"}
+      backgroundColor={"#eeeeee"}
       p={"20px"}
-      mt={"70px"}
+      mt={"60px"}
       mb={5}
     >
-      <Heading mb={"10px"}>Add Product Form</Heading>
       <FormControl>
+      <Heading mb={"10px"}>Add Product Form</Heading>
         <FormLabel m={"10px"}>Image URL</FormLabel>
         <Input
           border="1px solid gray"
           type="text"
           value={formState.image}
-          placeholder="image"
+          placeholder="Image"
           size="md"
           name="image"
+          onChange={handleChange}
+          mb={"10px"}
+        />
+        <FormLabel m={"10px"}>Title</FormLabel>
+        <Input
+          border="1px solid gray"
+          type="text"
+          value={formState.title}
+          placeholder="Title"
+          size="md"
+          name="title"
           onChange={handleChange}
           mb={"10px"}
         />
@@ -83,7 +98,7 @@ const Addproduct = () => {
           border="1px solid gray"
           type="text"
           value={formState.brand}
-          placeholder="brand"
+          placeholder="Brand"
           size="md"
           name="brand"
           onChange={handleChange}
@@ -93,35 +108,51 @@ const Addproduct = () => {
         <Input
           border="1px solid gray"
           type="number"
-          value={formState.price}
-          placeholder="price"
-          size="md"
-          name="price"
-          onChange={handleChange}
-          mb={"10px"}
-        />
-        <FormLabel m={"10px"}>Price-2</FormLabel>
-        <Input
-          border="1px solid gray"
-          type="number"
           value={formState.ogPrice}
-          placeholder="price-2"
+          placeholder="Price"
           size="md"
           name="ogPrice"
           onChange={handleChange}
           mb={"10px"}
+        />
+        {/* <FormLabel m={"10px"}>Price</FormLabel> */}
+        <Input
+          border="1px solid gray"
+          type="number"
+          value={
+            (formState.Price =
+              formState.ogPrice -
+              (formState.ogPrice * formState.discount) / 100)
+          }
+          placeholder="Price"
+          size="md"
+          name="price"
+          onChange={handleChange}
+          mb={"10px"}
+          hidden
         />
         <FormLabel m={"10px"}>Discount</FormLabel>
         <Input
           border="1px solid gray"
           type="number"
           value={formState.discount}
-          placeholder="discount"
+          placeholder="Discount"
           size="md"
           name="discount"
           onChange={handleChange}
           mb={"10px"}
         />
+        <FormLabel m={"10px"}>Gender</FormLabel>
+        <Select
+          placeholder="Select"
+          border="1px solid gray"
+          name="gender"
+          onChange={handleChange}
+        >
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </Select>
         <Button
           onClick={handleSubmit}
           colorScheme="teal"
@@ -133,6 +164,7 @@ const Addproduct = () => {
         </Button>
       </FormControl>
     </Container>
+    </>
   );
 };
 

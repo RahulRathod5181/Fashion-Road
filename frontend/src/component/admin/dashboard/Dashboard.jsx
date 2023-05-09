@@ -11,10 +11,12 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
+import AdminNavbar from "../navbar/Navbar";
 
 const Dashboard = () => {
   return (
     <>
+    <AdminNavbar/>
       <Container maxW="container.xl">
         <Heading mb={"10px"}>Dashboard</Heading>
         <Grid

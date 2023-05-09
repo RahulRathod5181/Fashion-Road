@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { Grid, Spinner } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
-import LandingCard from "./LandingCard";
-import { getProducts } from "../../redux/LandingPage/action";
-const LandingProduct = () => {
+import DressCard from './DressCard'
+import { dressProducts } from "../../../redux/user/dresses/action";
+
+const DressProduct = () => {
   const dispatch = useDispatch();
-  const { isLoading, products } = useSelector((store) => {
-    return store.LandingReducer;
+  const { isLoading, dresses } = useSelector((store) => {
+    return store.dressReducer;
   });
-  // console.log(products);
+ 
   useEffect(() => {
-    dispatch(getProducts);
+    dispatch(dressProducts);
   }, []);
   if (isLoading) {
     return <Spinner size="xl" mt={"20%"} />;
@@ -26,12 +27,12 @@ const LandingProduct = () => {
       overflow={"-moz-hidden-unscrollable"}
       gap={5}
     >
-      {products.length > 0 &&
-        products.map((item) => {
-          return <LandingCard key={item._id} {...item} />;
+      {dresses.length > 0 &&
+        dresses.map((item) => {
+          return <DressCard key={item._id} {...item} />;
         })}
     </Grid>
   );
 };
 
-export default LandingProduct;
+export default DressProduct;

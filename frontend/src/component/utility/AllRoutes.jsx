@@ -7,7 +7,14 @@ import AdminSignup from "../admin/login_signup/AdminSignup";
 import Landing from "../landingPage/Landing";
 import Addproduct from "../admin/addProduct/Addproduct";
 import Dashboard from "../admin/dashboard/Dashboard";
-
+import Product from "../admin/admin product/Product";
+import EditProduct from "../admin/admin product/EditProduct";
+import Shirt from "../landingPage/shirt list/Shirt";
+import Sarees from "../landingPage/sarees list/Sarees";
+import Kurta from "../landingPage/kurta list/Kurta";
+import Footwere from "../landingPage/footware list/Footwere";
+import Dress from "../landingPage/dresses list/Dress";
+import Accessories from "../landingPage/accessories list/Accessories";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -17,8 +24,15 @@ const AllRoutes = () => {
       <Route path="/adminsignup" element={<AdminSignup />} />
       <Route path="/" element={<Landing />} />
       <Route path="/adminAddproduct" element={<Addproduct />} />
-      <Route path="/adminDashboard" element={< Dashboard />} />
-
+      <Route path="/adminDashboard" element={<Dashboard />} />
+      <Route path="/adminProduct" element={<Product />} />
+      <Route path="/editProduct/:id" element={<EditProduct />} />
+      <Route path="/shirtProduct" element={<Shirt />} />
+      <Route path="/sareeProduct" element={<Sarees />} />
+      <Route path="/kurtaProduct" element={<Kurta />} />
+      <Route path="/footwereProduct" element={<Footwere />} />
+      <Route path="/dressProduct" element={<Dress />} />
+      <Route path="/accessoriesProduct" element={<Accessories />} />
     </Routes>
   );
 };

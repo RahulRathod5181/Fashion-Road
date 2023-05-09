@@ -8,13 +8,19 @@ import {
   WrapItem,
   Flex,
   Box,
-  color,
   useToast,
 } from "@chakra-ui/react";
 import { FaHeart, FaRegHeart, FaWhatsapp } from "react-icons/fa";
-const LandingCard = ({ poster, profile, seller, followers, title, price,likes }) => {
-  const toast = useToast()
-  const statuses = [ 'info']
+const ShirtCard = ({
+  poster,
+  profile,
+  seller,
+  followers,
+  title,
+  
+}) => {
+  const toast = useToast();
+  const statuses = ["info"];
   const positions = ["top"];
   const [like, setLike] = useState(true);
 
@@ -29,7 +35,6 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
   };
   const handleTwo = () => {
     setLike(true);
-    
   };
   return (
     <Card maxW="sm">
@@ -42,8 +47,8 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
         >
           {title}
         </Text>
-        <Image src={poster} alt="Green double couch with wooden legs" />
-        <Flex mt="3" justifyContent={"space-between"} justifyItems={"center"} >
+        <Image src={poster} alt={title} />
+        <Flex mt="3" justifyContent={"space-between"} justifyItems={"center"}>
           <Box display={"flex"}>
             {/* THIS IS PROFILE SECTION */}
 
@@ -78,12 +83,10 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
                   color="red"
                   size={"35px"}
                   alignSelf={"center"}
-                  
                 />
-                
               )}
-              <Box ml={5} >
-              <FaWhatsapp color="green" size={"35px"} alignSelf={"center"} />
+              <Box ml={5}>
+                <FaWhatsapp color="green" size={"35px"} alignSelf={"center"} />
               </Box>
             </Text>
           </Box>
@@ -93,4 +96,4 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
   );
 };
 
-export default LandingCard;
+export default ShirtCard;
