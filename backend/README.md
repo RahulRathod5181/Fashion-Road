@@ -65,3 +65,14 @@
 -     `${baseURL}/admin/add`
 ### admin login
 -     `${baseURL}/admin/login/`
+
+
+
+### cart page  add to cart endpoint 
+-     `${baseURL}/cart/add`
+### cart page  update cart product endpoint 
+-     `${baseURL}/cart/update/:id`
+### cart page  delete cart product endpoint 
+-     `${baseURL}/cart/delete/:id`
+### cart page  get present login cart product endpoint 
+-     `${baseURL}/cart/`
