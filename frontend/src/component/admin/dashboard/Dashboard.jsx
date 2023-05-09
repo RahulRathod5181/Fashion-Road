@@ -17,8 +17,8 @@ const Dashboard = () => {
   return (
     <>
     <AdminNavbar/>
-      <Container maxW="container.xl">
-        <Heading mb={"10px"}>Dashboard</Heading>
+      <Container maxW="container.xl" >
+        <Heading mb={"10px"} textAlign={'center'} pt={5} >Dashboard</Heading>
         <Grid
           templateColumns={{
             base: "repeat(1, 1fr)",
@@ -29,7 +29,7 @@ const Dashboard = () => {
           mt={5}
           p={10}
         >
-          <GridItem w="100%" h="250" bg="white" color="#000000">
+          <GridItem w="100%" h="250" bg="white" color="#000000" border={'1px solid black '} >
             <Stat textAlign={"center"} p={5} lineHeight={10}>
               <StatLabel fontSize={15} fontWeight={"bold"}>
                 Active Users
@@ -45,7 +45,7 @@ const Dashboard = () => {
               </StatNumber>
             </Stat>
           </GridItem>
-          <GridItem w="100%" h="250" bg="white" color="#000000">
+          <GridItem w="100%" h="250" bg="white" color="#000000" border={'1px solid black '}>
             <Stat textAlign={"center"} p={5} lineHeight={10}>
               <StatLabel fontSize={15} fontWeight={"bold"}>
                 Last Months Sales
@@ -61,7 +61,7 @@ const Dashboard = () => {
               </StatNumber>
             </Stat>
           </GridItem>
-          <GridItem w="100%" h="250" bg="white" color="#000000">
+          <GridItem w="100%" h="250" bg="white" color="#000000" border={'1px solid black '}>
             <Stat textAlign={"center"} p={5} lineHeight={10}>
               <StatLabel fontSize={15} fontWeight={"bold"}>
                 Orders Completed This Months
@@ -82,20 +82,20 @@ const Dashboard = () => {
         {/* GRAPHS AND PIA CHART */}
 
         <Stack direction={{ base: "column", md: "row" }} spacing="24px" p={8}>
-          <Box w={{ base: "100%", md: "50%" }} h={{ base: "100%", md: "50%" }}>
+          <Box w={{ base: "100%", md: "50%" }} h={{ base: "100%", md: "50%" }} border={'1px solid black '}>
             <img
               src="https://www.slideteam.net/media/catalog/product/cache/1280x720/g/r/graph_showing_sales_performance_comparison_across_2_years_slide01.jpg"
               alt="graph sales"
             />
           </Box>
-          <Box w={{ base: "100%", md: "50%" }} h={{ base: "100%", md: "50%" }}>
+          <Box w={{ base: "100%", md: "50%" }} h={{ base: "100%", md: "50%" }} border={'1px solid black '}>
             <img
               src="https://www.slideteam.net/media/catalog/product/cache/1280x720/p/i/piece_pie_chart_showing_the_companys_revenue_split_slide01.jpg"
               alt="pia chart"
             />
           </Box>
         </Stack>
-        <Box w={{ base: "95%", md: "95%" }} ml={"3%"} mb={5} >
+        <Box w={{ base: "95%", md: "95%" }} ml={"3%"} mb={5} border={'1px solid black '}>
           <Image
             src="https://learn.microsoft.com/en-us/power-bi/visuals/media/power-bi-line-charts/power-bi-line.png"
             alt="sale chart"

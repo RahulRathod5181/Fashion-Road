@@ -32,19 +32,20 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
     
   };
   return (
-    <Card maxW="sm">
+    <Card maxW="sm" border={'1px solid black '}>
       <CardBody>
         <Text
           maxBlockSize={5}
           fontWeight={600}
           color={"blackAlpha.900"}
           mb={"3"}
+          textAlign={'center'}
         >
           {title}
         </Text>
         <Image src={poster} alt="Green double couch with wooden legs" />
         <Flex mt="3" justifyContent={"space-between"} justifyItems={"center"} >
-          <Box display={"flex"}>
+          <Box display={"flex"} >
             {/* THIS IS PROFILE SECTION */}
 
             <WrapItem>
@@ -53,10 +54,10 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
             <Box>
               {/* THIS IS NAME AND FOLLOWER SECTION */}
 
-              <Text ml={2} fontSize={"sm"}>
+              <Text ml={2}>
                 {seller}
               </Text>
-              <Text ml={2} fontSize={"sm"}>
+              <Text ml={2} >
                 {followers} Followers
               </Text>
             </Box>

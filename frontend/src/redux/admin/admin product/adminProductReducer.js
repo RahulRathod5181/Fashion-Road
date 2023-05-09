@@ -1,4 +1,5 @@
 import {
+  ADD_REQUEST_SUCCESS,
   GET_REQUEST_SUCCESS,
   REQUEST_LOADING,
   REQUEST_PENDING,
@@ -24,6 +25,11 @@ export const adminProductReducer = (state = initialState, action) => {
         isLoading: false,
         adminProducts: payload,
       };
+      case ADD_REQUEST_SUCCESS:
+        return{
+          ...state,
+          isLoading:false
+        }
     case REQUEST_PENDING:
       return {
         ...state,

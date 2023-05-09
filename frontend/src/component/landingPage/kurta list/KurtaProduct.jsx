@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Grid, Spinner } from "@chakra-ui/react";
+import { Grid, Heading, Spinner } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import KurtaCard from "./KurtaCard";
 import { kurtaProducts } from "../../../redux/user/kurta/action";
@@ -13,7 +13,9 @@ const KurtaProduct = () => {
     dispatch(kurtaProducts);
   }, []);
   if (isLoading) {
-    return <Spinner size="xl" mt={"20%"} />;
+    return (
+      <Heading  size={'2xl'} mt={'10%'} textAlign={'center'} >Loading....</Heading>
+    )
   }
   return (
     <Grid

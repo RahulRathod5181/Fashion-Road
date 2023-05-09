@@ -32,7 +32,8 @@ const ListHeader = ({ children }) => {
 
 export default function Footer() {
   return (
-    <Box
+    <Box 
+    // border={'1px solid black '}
       bg={useColorModeValue("#cfcfcf79")}
       color={useColorModeValue("gray.700", "gray.200")}
     >

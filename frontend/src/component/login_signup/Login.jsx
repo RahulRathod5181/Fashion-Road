@@ -37,7 +37,7 @@ export default function Login() {
   });
 
   // console.log(token)
-  localStorage.setItem("token", JSON.stringify(token));
+  localStorage.setItem("userToken", JSON.stringify(token));
   
   // if (power === "") {
   //   isAuth = false;

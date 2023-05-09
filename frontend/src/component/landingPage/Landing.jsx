@@ -4,11 +4,12 @@ import { Box, Container, Divider } from "@chakra-ui/react";
 import LandingProduct from "./LandingProduct";
 import Footer from "../utility/Footer";
 import LandingTopBar from "./LandingTopBar";
-
+import Navbar from '../Navbar/Navbar'
 const Landing = () => {
   return (
     <>
-      <Box bgColor={"#eeeeee"}>
+    <Navbar/>
+      <Box mt={'150px'} >
         <Container
           maxW={{
             base: "100%",
@@ -16,7 +17,7 @@ const Landing = () => {
             lg: "80%",
           }}
         >
-          <Box>
+          <Box >
             <LandingTopBar/>
           </Box>
           <Box paddingTop={"5%"}>

@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <Box pb="28" position={"fixed"} zIndex={"999"}>
+    <Box pb="28" position={"fixed"} top={0} left={0} zIndex={"999"}>
       <Box className={styles.navbar_container}>
         <Box className={styles.first_box}>
           <Box id={styles.logo}>

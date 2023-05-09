@@ -6,18 +6,20 @@ import AdminNavbar from "../navbar/Navbar";
 
 const Product = () => {
   return (
-    <Container
-      maxW={{
-        base: "100%",
-        sm: "90%",
-        lg: "80%",
-      }}
-    >
+    <>
       <AdminNavbar />
-      <Box mb={5}>
-        <AdminProduct />
-      </Box>
-    </Container>
+      <Container
+        maxW={{
+          base: "100%",
+          sm: "90%",
+          lg: "80%",
+        }}
+      >
+        <Box mb={5}>
+          <AdminProduct />
+        </Box>
+      </Container>
+    </>
   );
 };
 
