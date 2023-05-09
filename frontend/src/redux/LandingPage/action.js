@@ -9,7 +9,7 @@ export const getProducts = (dispatch) => {
   dispatch({ type: GET_PRODUCT_REQUEST });
 
   axios
-    .get(`https://project-backend-t6y7.onrender.com/products`)
+    .get(`https://clumsy-miniskirt-tuna.cyclic.app/`)
     .then((res) => {
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
     })

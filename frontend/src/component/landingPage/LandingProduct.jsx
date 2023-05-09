@@ -28,7 +28,7 @@ const LandingProduct = () => {
     >
       {products.length > 0 &&
         products.map((item) => {
-          return <LandingCard key={item.id} {...item} />;
+          return <LandingCard key={item._id} {...item} />;
         })}
     </Grid>
   );

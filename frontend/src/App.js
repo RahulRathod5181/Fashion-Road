@@ -9,20 +9,18 @@ import AllRoutes from "./component/utility/AllRoutes";
 import Footer from "./component/utility/Footer";
 
 function App() {
-  
- 
-  return (
 
-    <div className="App">
-      {/* <AllRoutes /> */}
+  return (
+    <div className="App" >
+       
       {/* <CartEmpty /> */}
       {/* <CartPage /> */}
 {/* <PaymentPage /> */}
 {/* <CreditCard /> */}
 {/* <AddressForm /> */}
-
-     </div>
-  );
+      <AllRoutes />
+      <Footer />
+    </div>
 }
 
 export default App;
