@@ -5,11 +5,11 @@ import {
   GET_PRODUCT_REQUEST,
 } from "./actionType";
 
-export const getProducts = (dispatch) => {
+export const dressProducts = (dispatch) => {
   dispatch({ type: GET_PRODUCT_REQUEST });
 
   axios
-    .get(`https://clumsy-miniskirt-tuna.cyclic.app/`)
+    .get(`https://clumsy-miniskirt-tuna.cyclic.app/?occasion=dresses`)
     .then((res) => {
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
     })
