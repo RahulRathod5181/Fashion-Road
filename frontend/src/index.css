@@ -37,4 +37,7 @@ position : relative;
  
 }
 
- 
+ .formBtn {
+  background: linear-gradient(45deg, blueviolet, deeppink);
+  
+ }
