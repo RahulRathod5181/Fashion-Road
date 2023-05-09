@@ -3,9 +3,17 @@ import React from "react";
 import AddressForm from "./AddressForm";
 import CartItems from "./CartItems";
 import DebitCard from "./DebitCard";
+import { useSelector } from "react-redux";
 
 const PaymentPage = () => {
-  const rColor = "#d3145a";
+
+ 
+
+  const { cartData } = useSelector((store) => {
+    return store.cartPageReducer;
+  });
+  console.log(cartData);
+
 
   return (
     <Stack
@@ -31,15 +39,16 @@ const PaymentPage = () => {
             Please Fill Address For Shipping
           </Text>
 
-          <AddressForm />
+          <AddressForm  />
           <Text mt={"20px"} fontSize={"19px"}>
-            Cart Items (5){" "}
+            Cart Items (5)
           </Text>
           <Stack>
+            {cartData.map((e,i)=> <CartItems key={i} {...e} />)}
+            {/* <CartItems />
             <CartItems />
             <CartItems />
-            <CartItems />
-            <CartItems />
+            <CartItems /> */}
           </Stack>
           <Button bgColor={"white"} borderRadius={"0"} m={0} p={"10px"}>
             EDIT CART
