@@ -11,46 +11,47 @@ import { getSingleWomen } from '../../redux/ProductPageReducer/action';
 import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import { async } from 'q';
+import Footer from '../utility/Footer';
 const SingleWomen = () => {
-    const {id} = useParams()
+    const { id } = useParams()
     const dispatch = useDispatch()
-    const [data,setData] = useState([])
+    const [data, setData] = useState([])
     const { productData, isLoading } = useSelector((store) => {
         // console.log(store)
         return store.ProductPageReducer
-      })
-    const [save,setSave] = useState(0);
+    })
+    const [save, setSave] = useState(0);
 
-    useEffect(()=>{
+    useEffect(() => {
         // dispatch(getSingleWomen(id)).then((res)=>{
         //     setSave(productData[0].ogPrice-productData[0].Price)
         //     setData([...productData])
         // }).catch(err=>console.log(err.message))
-        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/products/womens/${id}`).then((res)=>{
+        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/products/womens/${id}`).then((res) => {
             // console.log(res.data)
-            setData((prev)=>prev=res.data)
-            setSave(+data[0].ogPrice-(+data[0].Price))
-        }).catch((err)=>console.log(err))
-    },[])
+            setData((prev) => prev = res.data)
+            setSave(+data[0].ogPrice - (+data[0].Price))
+        }).catch((err) => console.log(err))
+    }, [])
     // console.log(data)
-    if(data.length){
+    if (data.length) {
 
-        var dis = data[0].ogPrice-data[0].Price
+        var dis = data[0].ogPrice - data[0].Price
     }
 
-    if(!data.length){
-        return <Navbar/>
-    }else{
+    if (!data.length) {
+        return <Navbar />
+    } else {
         return (
             <div className={styles.container}>
-                <Navbar/>
+                <Navbar />
                 <div className={styles.main}>
                     <div className={styles.left}>
                         <img src={data[0].image} alt="product"></img>
                     </div>
                     <div className={styles.right}>
                         <p>{data[0].title}</p>
-                        <p>{data[0].brand}</p>
+                        <p>By {data[0].brand}</p>
                         <div className={styles.share}>
                             <BsFillShareFill size={"22px"} />
                             <BsWhatsapp color='rgb(37, 211, 102)' size="23px" />
@@ -64,6 +65,9 @@ const SingleWomen = () => {
                             <button>L</button>
                             <button>XL</button>
                             <button>2XL</button>
+                        </div>
+                        <div className={styles.mediaPriceMain}>
+                            <p>Product Price</p>
                         </div>
                         <div className={styles.priceMain}>
                             <div className={styles.priceLeft}>
@@ -144,12 +148,21 @@ const SingleWomen = () => {
                             </div>
                         </div>
                     </div>
-    
+
+                </div>
+                <Footer/>
+                <div className={styles.media}>
+                    <div>
+                        <button>BUY NOW</button>
+                    </div>
+                    <div>
+                        <button>ADD TO CART</button>
+                    </div>
                 </div>
             </div>
         )
     }
-    
+
 }
 
 export default SingleWomen
