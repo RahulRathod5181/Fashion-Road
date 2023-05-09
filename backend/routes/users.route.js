@@ -1,5 +1,6 @@
 const express=require("express");
 const {UserModel}=require("../models/users.model");
+const {auth}=require("../middlewares/auth.middleware")
 const jwt=require("jsonwebtoken")
 const bcrypt = require('bcrypt');
 const userRoute=express.Router()
@@ -11,7 +12,7 @@ userRoute.post("/register",async(req,res)=>{
 
 
     try {
-            const exist=await UserModel.findOne({email})
+        const exist=await UserModel.findOne({email})
             if(exist){
                 res.status(400).send({"msg":"Email already exist!"})
             }else{
@@ -56,6 +57,33 @@ userRoute.post("/login",async(req,res)=>{
         }
     
 })
+
+//read users
+userRoute.use(auth)
+userRoute.get("/",async(req,res)=>{
+    try {
+        const data=await UserModel.find()
+        res.send(data)
+    } catch (error) {
+        res.send(error
+            )
+    }
+})
+//delete users
+userRoute.use(auth)
+userRoute.delete("/delete/:id",async(req,res)=>{
+    const {id}=req.params
+    try {
+        await UserModel.findByIdAndDelete({_id:id})
+        res.send({"msg":`${id} deleted successfull`})
+    } catch (error) {
+        res.send(error)
+    }
+})
+
+
+
+
 
 
 module.exports={
