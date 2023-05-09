@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import AdminCard from "./AdminCard";
-import { Box, Container, Grid, GridItem, Spinner } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, Heading, Spinner } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../../../redux/admin/admin product/action";
 const AdminProduct = () => {
@@ -14,15 +14,16 @@ const AdminProduct = () => {
     dispatch(getData);
   }, []);
 
-  // console.log(adminProducts);
-
+  console.log(adminProducts);
 
   if (isLoading) {
-    return <Spinner size="xl" mt={"20%"} />;
+    return (
+      <Heading  size={'2xl'} mt={'10%'} textAlign={'center'} >Loading....</Heading>
+    )
   }
   return (
     <>
-      <Container maxW="container.1xl" >
+      <Container maxW="container.1xl">
         <Grid
           templateColumns={{
             base: "repeat(1,1fr)",
@@ -32,7 +33,7 @@ const AdminProduct = () => {
           }}
           gap={6}
           mb="20px"
-          mt={'60px'}
+          mt={"60px"}
         >
           {adminProducts.length > 0 &&
             adminProducts.map((el) => {

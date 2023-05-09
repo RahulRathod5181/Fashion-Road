@@ -1,56 +1,45 @@
-import React from "react";
+import { ReactNode } from "react";
+import {
+  Box,
+  Flex,
+  Button,
+  useColorModeValue,
+  Stack,
+  useColorMode,
+  Center,
+} from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 
-const AdminNavbar = () => {
+export default function AdminNavbar() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <div>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <Link to="/adminDashboard" className="navbar-brand">
-            Dashboard
+    <>
+      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} position={'sticky'} top={0} >
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <Link to="/adminDashboard">
+            <Box>Dashboard</Box>{" "}
           </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link
-                to="/adminAddProduct"
-                className="nav-link active"
-                aria-current="page"
-              >
-                Add Product
-              </Link>
-              <Link
-                to="/adminProduct"
-                className="nav-link active"
-                aria-current="page"
-              >
-                Product List
-              </Link>
-              {/* <Link to="/users" className="nav-link active" aria-current="page" >
-                Users
-              </Link>
-              <Link to="/orders" className="nav-link active" aria-current="page" >
-                Orders
-              </Link> */}
-              <Link to="/" className="nav-link active" aria-current="page">
-                Home Page
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  );
-};
+          <Link to="/adminAddproduct">
+            <Box>Add Product</Box>{" "}
+          </Link>
+          <Link to="/adminProduct">
+            <Box>Product List</Box>{" "}
+          </Link>
+          <Link to="/">
+            <Box>Home</Box>{" "}
+          </Link>
 
-export default AdminNavbar;
+          <Flex alignItems={"center"}>
+            <Stack direction={"row"} spacing={7}>
+              <Button onClick={toggleColorMode}>
+                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+              </Button>
+            </Stack>
+          </Flex>
+        </Flex>
+      </Box>
+    </>
+  );
+}

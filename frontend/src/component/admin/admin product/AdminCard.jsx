@@ -14,9 +14,9 @@ import { Link } from "react-router-dom";
 const AdminCard = ({ image, title, id, price, category }) => {
   return (
     <div>
-      <Card maxW="sm" mt={5} >
+      <Card maxW="sm" mt={5} border={'1px solid black '} position={'static'} >
         <CardBody>
-          <Text size="sm" maxBlockSize={5} fontWeight={600} mb={2}>
+          <Text size="sm" maxBlockSize={5} textAlign={'center'} fontWeight={600} mb={2}>
             {title}
           </Text>
           <Image
@@ -32,11 +32,11 @@ const AdminCard = ({ image, title, id, price, category }) => {
         </CardBody>
         <Divider />
         <CardFooter justifyContent={"space-between"} justifyItems={"center"}>
-          <Button mr="20px">
+          <Button mr="20px" position={'static'}>
             {" "}
             <Link to={`/editProduct/${id}`}>Edit</Link>
           </Button>
-          <Button>Delete</Button>
+          <Button position={'static'}>Delete</Button>
         </CardFooter>
       </Card>
     </div>

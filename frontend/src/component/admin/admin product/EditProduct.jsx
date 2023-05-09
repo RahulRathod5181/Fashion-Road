@@ -53,10 +53,10 @@ import {
           border="1px"
           borderColor="gray.400"
           p={"20px"}
-        //   mt={"70px"}
+          mt={"20px"}
         mb={5}
         >
-          <Heading mb={"10px"}> Edit Product : {id}</Heading>
+          <Heading mb={"10px"} textAlign={'center'} > Edit Product : {id}</Heading>
           <FormControl >
             <FormLabel m={"10px"}>Image URL</FormLabel>
             <Input
@@ -117,6 +117,9 @@ import {
               colorScheme="teal"
               variant="outline"
               size="md"
+              display={'block'}
+              w={'20%'}
+              m={'auto'}
               mt={"20px"}
             >
               Submit
