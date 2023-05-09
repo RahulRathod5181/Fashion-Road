@@ -23,7 +23,7 @@ app.use("/",dataRoute);
 app.use("/products",productRoute)
 
 app.use("/cart", cartRouter);
-app.use(auth);
+
 app.use("/admin", adminRouter);
 
 app.listen(process.env.port,async()=>{
