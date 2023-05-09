@@ -37,13 +37,14 @@ const ShirtCard = ({
     setLike(true);
   };
   return (
-    <Card maxW="sm">
+    <Card maxW="sm" border={'1px solid black '} mb={5}>
       <CardBody>
         <Text
           maxBlockSize={5}
           fontWeight={600}
           color={"blackAlpha.900"}
           mb={"3"}
+          textAlign={'center'}
         >
           {title}
         </Text>
