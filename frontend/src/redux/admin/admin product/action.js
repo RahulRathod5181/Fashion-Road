@@ -4,13 +4,15 @@ import {
   REQUEST_PENDING,
   GET_REQUEST_SUCCESS,
   ADD_REQUEST_SUCCESS,
+  PATCH_REQUEST_SUCCESS,
+  DELETE_REQUEST_SUCCESS,
 } from "./actionType";
 
 export const getData = (dispatch) => {
   dispatch({ type: REQUEST_LOADING });
 
   axios
-    .get(`https://clumsy-miniskirt-tuna.cyclic.app/admin`)
+    .get(`https://clumsy-miniskirt-tuna.cyclic.app/products/mens`)
     .then((res) => {
       dispatch({ type: GET_REQUEST_SUCCESS, payload: res.data });
     })
@@ -23,9 +25,47 @@ export const addProduct = (payload) => (dispatch) => {
   dispatch({ type: REQUEST_LOADING });
 
   axios
-    .post(`https://project-backend-t6y7.onrender.com/products`, payload,{headers:{'Authorization':`${localStorage.getItem('adminToken')}`}})
+    .post(
+      `https://clumsy-miniskirt-tuna.cyclic.app/products/addProduct`,
+      payload,
+      { headers: { Authorization: `${localStorage.getItem("adminToken")}` } }
+    )
     .then(() => {
       dispatch({ type: ADD_REQUEST_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch({ type: REQUEST_PENDING });
+    });
+};
+
+export const editProduct = (payload, id) => (dispatch) => {
+  dispatch({ type: REQUEST_LOADING });
+
+  axios
+    .patch(
+      `https://clumsy-miniskirt-tuna.cyclic.app/products/updateProduct/${id}`,
+      payload,
+      { headers: { Authorization: `${localStorage.getItem("adminToken")}` } }
+    )
+    .then(() => {
+      dispatch({ type: PATCH_REQUEST_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch({ type: REQUEST_PENDING });
+    });
+};
+
+export const deleteProduct = (id) => (dispatch) => {
+  dispatch({ type: REQUEST_LOADING });
+
+  axios
+    .delete(
+      `https://clumsy-miniskirt-tuna.cyclic.app/products/deleteProduct/${id}`,
+
+      { headers: { Authorization: `${localStorage.getItem("adminToken")}` } }
+    )
+    .then(() => {
+      dispatch({ type: DELETE_REQUEST_SUCCESS });
     })
     .catch((err) => {
       dispatch({ type: REQUEST_PENDING });
