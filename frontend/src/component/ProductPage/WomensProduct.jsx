@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { getProduct } from '../../redux/ProductPageReducer/action'
+import { getProduct, getProductWomen } from '../../redux/ProductPageReducer/action'
 import styles from "./Product.module.css"
 import AccordionSide from './Accordion'
 import { AiOutlineHeart } from 'react-icons/ai';
 import { BsWhatsapp } from 'react-icons/bs';
 import { HiFilter } from 'react-icons/hi';
 import { BiSortAlt2 } from 'react-icons/bi';
-import { useLocation, useSearchParams } from 'react-router-dom'
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { Spinner } from '@chakra-ui/react'
+import Navbar from '../Navbar/Navbar'
 
 
 
@@ -23,17 +24,24 @@ const Product = () => {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const dispatch = useDispatch()
+  const nav = useNavigate()
 
   let obj = {
     params: {
       discount: searchParams.getAll("discount"),
       brand: searchParams.getAll("brand"),
-      offers: searchParams.getAll("offers")
+      offers: searchParams.getAll("offers"),
+      price:searchParams.get("price")
     }
   }
 
+  const handleSingle = (id)=>{
+    // console.log(id)
+    nav(`/womens/${id}`)
+  }
+
   useEffect(() => {
-    dispatch(getProduct(obj));
+    dispatch(getProductWomen(obj));
     setCount((prev) => prev = productData.length)
   }, [location.search, productData.length])
 
@@ -42,6 +50,7 @@ const Product = () => {
   return (
 
     <>
+      <Navbar/>
       <div className={styles.main}>
         <div className={styles.left}>
           <div className={styles.count}>
@@ -50,7 +59,7 @@ const Product = () => {
           </div>
           <div>
             <p>Filter & Sort</p>
-            <AccordionSide />
+            <AccordionSide/>
           </div>
         </div>
         {isLoading?((< div style={{margin:"auto", marginTop:"20px"}} >  <h2 style={{ fontSize: "24", fontWeight: "bold", letterSpacing: "1px", margin:"auto" }}>Loading...</h2> <Spinner color='#65e6e5' mt={"20px"} size={'xl'} m={"auto"} /></div>)):(!productData.length && !isLoading)?(<h2 style={{ fontSize: "30px", fontWeight: "bold", letterSpacing: "1px", margin:"auto", marginTop:" 50px" }}>No Products Available!!</h2>):(
@@ -58,7 +67,7 @@ const Product = () => {
         <div className={styles.right}>
 
           {productData?.map((el, i) => (
-            <div key={i + 1} className={styles.productCard}>
+            <div key={i + 1} className={styles.productCard} onClick={()=>handleSingle(el._id)}>
               <img src={el.image} alt={el.title} />
               <p>{el.title.toUpperCase().substring(0, 44)}</p>
               <p>By {el.brand}</p>
