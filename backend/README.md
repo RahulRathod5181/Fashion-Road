@@ -78,4 +78,4 @@ https://clumsy-miniskirt-tuna.cyclic.app/*
 ### cart delete
 -     `${baseURL}/cart/delete/:id`
 ### cart update
--     `${baseURL}/admin/update/:id`
+-     `${baseURL}/cart/update/:id`
