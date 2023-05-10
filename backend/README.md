@@ -66,3 +66,16 @@ https://clumsy-miniskirt-tuna.cyclic.app/*
 -     `${baseURL}/admin/add`
 ### admin login
 -     `${baseURL}/admin/login/`
+
+
+### cart page endpoint
+### cart product
+-     `${baseURL}/cart/`
+### cart add
+-     `${baseURL}/cart/add`
+### cart update
+-     `${baseURL}/cart/update/:id`
+### cart delete
+-     `${baseURL}/cart/delete/:id`
+### cart update
+-     `${baseURL}/admin/update/:id`
