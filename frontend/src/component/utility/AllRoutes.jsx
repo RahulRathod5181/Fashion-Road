@@ -15,9 +15,14 @@ import Kurta from "../landingPage/kurta list/Kurta";
 import Footwere from "../landingPage/footware list/Footwere";
 import Dress from "../landingPage/dresses list/Dress";
 import Accessories from "../landingPage/accessories list/Accessories";
+
+import PrivateAdminRoute from "./PrivateAdminRoute";
+import PrivateUserRoute from "./PrivateUserRoute";
+
 import MensProduct from "../ProductPage/MensProduct"
 import WomensProduct from "../ProductPage/WomensProduct"
 import SingleWomen from "../ProductPage/SingleWomen";
+
 const AllRoutes = () => {
   return (
     <Routes>
@@ -30,7 +35,14 @@ const AllRoutes = () => {
       <Route path="/adminsignup" element={<AdminSignup />} />
       <Route path="/" element={<Landing />} />
       <Route path="/adminAddproduct" element={<Addproduct />} />
-      <Route path="/adminDashboard" element={<Dashboard />} />
+      <Route
+        path="/adminDashboard"
+        element={
+          <PrivateAdminRoute>
+            <Dashboard />
+          </PrivateAdminRoute>
+        }
+      />
       <Route path="/adminProduct" element={<Product />} />
       <Route path="/editProduct/:id" element={<EditProduct />} />
       <Route path="/shirtProduct" element={<Shirt />} />

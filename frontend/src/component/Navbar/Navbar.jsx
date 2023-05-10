@@ -288,16 +288,16 @@ const Navbar = () => {
                 </MenuButton>
                 <MenuList>
                   <MenuItem>
-                    <a href="/register">User Register</a>
+                    <Link to={'/signup'} >User Register</Link>
                   </MenuItem>
                   <MenuItem>
-                    <a href="/login">User Login</a>
+                    <Link to={'/login'} >User Login</Link>
                   </MenuItem>
                   <MenuItem>
-                    <a>Admin Register</a>
+                    <Link to={'/adminsignup'} >Admin Register</Link>
                   </MenuItem>
                   <MenuItem>
-                    <a>Admin Login</a>
+                    <Link to={'/adminlogin'} >Admin Login</Link>
                   </MenuItem>
                 </MenuList>
               </Menu>

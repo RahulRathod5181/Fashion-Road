@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
-import AdminCard from "./AdminCard";
 import { Box, Container, Grid, GridItem, Heading, Spinner } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData } from "../../../redux/admin/admin product/action";
-const AdminProduct = () => {
+import { getUsers } from "../../../redux/admin/people/action";
+import UserCard from './UserCard'
+const AdminUser = () => {
   const dispatch = useDispatch();
-  console.log("hello world");
-  const { isLoading, adminProducts } = useSelector((store) => {
-    return store.adminProductReducer;
+  const { isLoading, users } = useSelector((store) => {
+    return store.adminUserReducer;
   });
 
   useEffect(() => {
-    dispatch(getData);
+    dispatch(getUsers);
   }, []);
 
-  console.log(adminProducts);
+  console.log(users);
 
   if (isLoading) {
     return (
@@ -35,9 +34,9 @@ const AdminProduct = () => {
           mb="20px"
           mt={"60px"}
         >
-          {adminProducts.length > 0 &&
-            adminProducts.map((el) => {
-              return <AdminCard key={el._id} {...el} />;
+          {users.length > 0 &&
+            users.map((el) => {
+              return <UserCard key={el.id} {...el} />;
             })}
         </Grid>
       </Container>
@@ -45,4 +44,4 @@ const AdminProduct = () => {
   );
 };
 
-export default AdminProduct;
+export default AdminUser;

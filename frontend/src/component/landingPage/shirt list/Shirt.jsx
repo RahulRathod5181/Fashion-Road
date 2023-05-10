@@ -13,7 +13,7 @@ const Shirt = () => {
           lg: "80%",
         }}
       >
-        <Box mt={'150px'} >
+        <Box mt={'130px'} >
         <ShirtProduct />
         </Box>
       </Container>
