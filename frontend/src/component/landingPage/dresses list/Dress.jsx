@@ -1,9 +1,11 @@
 import React from 'react'
 import DressProduct from './DressProduct'
-import { Container } from '@chakra-ui/react'
-
+import { Box, Container } from '@chakra-ui/react'
+import Navbar from '../../Navbar/Navbar'
 const Dress = () => {
   return (
+    <>
+    <Navbar/>
     <Container
       maxW={{
         base: "100%",
@@ -11,8 +13,12 @@ const Dress = () => {
         lg: "80%",
       }}
     >
+      <Box mt={'130px'}>
+
       <DressProduct />
+      </Box>
     </Container>
+    </>
   )
 }
 

@@ -28,7 +28,7 @@ export default function Login() {
   const statuses = ["success", "error", "warning", "info"];
   const positions = ["top"];
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
 
   const dispatch = useDispatch();
 
@@ -36,13 +36,10 @@ export default function Login() {
     return store.userLoginReducer;
   });
 
-  // console.log(token)
-  localStorage.setItem("userToken", JSON.stringify(token));
+  console.log(token,isAuth)
+
   
-  // if (power === "") {
-  //   isAuth = false;
-  // }
-  // console.log(isAuth);
+
   //! HANDLECHANGE FUNCTION
 
   const handleChange = (e) => {
@@ -77,7 +74,7 @@ export default function Login() {
       //! ALLCLEAR GO FURTHER
     } else {
       dispatch(loginData(formState)).then(() => {
-        navigate(location.state, { replace: true });
+        navigate(location.state,{replace:true})
       });
       // console.log(formState);
       setFormState(initialState);
@@ -87,75 +84,78 @@ export default function Login() {
         status: statuses[0],
         isClosable: true,
       });
+      // navigate("/");
     }
   };
   return (
-    <Flex
-      minH={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
-      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
-        <Stack align={"center"}>
-          <Heading fontSize={"4xl"}>Log-in to your account</Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy shopping ✌️
-          </Text>
-        </Stack>
-        <Box
-          rounded={"lg"}
-          bg={useColorModeValue("white", "gray.700")}
-          boxShadow={"lg"}
-          p={8}
-        >
-          <Stack spacing={4}>
-            {/* //* EMAIL INPUT FILED */}
-            <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
-              <Input
-                type="email"
-                placeholder="Email"
-                name="email"
-                value={formState.email}
-                onChange={handleChange}
-              />
-            </FormControl>
-            {/* //* PASSWORD INPUT FIELD */}
-            <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
-              <Input
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={formState.password}
-                onChange={handleChange}
-              />
-            </FormControl>
-            <Stack spacing={10}>
-              <Stack
-                direction={{ base: "column", sm: "row" }}
-                align={"start"}
-                justify={"space-between"}
-              >
-                <Checkbox>Remember me</Checkbox>
-                <Link color={"blue.400"}>Forgot password?</Link>
-              </Stack>
-              {/* //* LOGIN BUTTON */}
-              <Button
-                onClick={handleSubmit}
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-              >
-                Log-in
-              </Button>
-            </Stack>
+    <>
+      <Flex
+        minH={"100vh"}
+        align={"center"}
+        justify={"center"}
+        bg={useColorModeValue("gray.50", "gray.800")}
+      >
+        <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+          <Stack align={"center"}>
+            <Heading fontSize={"4xl"}>Log-in to your account</Heading>
+            <Text fontSize={"lg"} color={"gray.600"}>
+              to enjoy shopping ✌️
+            </Text>
           </Stack>
-        </Box>
-      </Stack>
-    </Flex>
+          <Box
+            rounded={"lg"}
+            bg={useColorModeValue("white", "gray.700")}
+            boxShadow={"lg"}
+            p={8}
+          >
+            <Stack spacing={4}>
+              {/* //* EMAIL INPUT FILED */}
+              <FormControl id="email" isRequired>
+                <FormLabel>Email address</FormLabel>
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+              </FormControl>
+              {/* //* PASSWORD INPUT FIELD */}
+              <FormControl id="password" isRequired>
+                <FormLabel>Password</FormLabel>
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={formState.password}
+                  onChange={handleChange}
+                />
+              </FormControl>
+              <Stack spacing={10}>
+                <Stack
+                  direction={{ base: "column", sm: "row" }}
+                  align={"start"}
+                  justify={"space-between"}
+                >
+                  <Checkbox>Remember me</Checkbox>
+                  <Link color={"blue.400"}>Forgot password?</Link>
+                </Stack>
+                {/* //* LOGIN BUTTON */}
+                <Button
+                  onClick={handleSubmit}
+                  bg={"blue.400"}
+                  color={"white"}
+                  _hover={{
+                    bg: "blue.500",
+                  }}
+                >
+                  Log-in
+                </Button>
+              </Stack>
+            </Stack>
+          </Box>
+        </Stack>
+      </Flex>
+    </>
   );
 }

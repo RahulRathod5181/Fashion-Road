@@ -9,15 +9,16 @@ const Landing = () => {
   return (
     <>
     <Navbar/>
-      <Box mt={'150px'} >
+    <Box bgColor={'#eeeeee'}>
+      <Box mt={'100px'}  >
         <Container
           maxW={{
             base: "100%",
             sm: "90%",
-            lg: "80%",
+            lg: "70%",
           }}
         >
-          <Box >
+          <Box mt={10} >
             <LandingTopBar/>
           </Box>
           <Box paddingTop={"5%"}>
@@ -27,6 +28,7 @@ const Landing = () => {
             <LandingProduct />
           </Box>
         </Container>
+      </Box>
       </Box>
     </>
   );

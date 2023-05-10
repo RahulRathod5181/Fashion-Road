@@ -54,7 +54,7 @@ export default function LandingCrousel() {
       // border={"2px solid green"}
       justifyContent={"center"}
       justifyItems={"center"}
-      width={"80%"}
+      width={"90%"}
       margin={"auto"}
     >
       {/* CSS files for react-slick */}
@@ -76,12 +76,15 @@ export default function LandingCrousel() {
             <Box
               // border={"2px solid yellow"}
               key={index}
-              width={"80%"}
+              width={"100%"}
               margin={"auto"}
+              
             >
               <Image
                 src={card.image}
-                maxW={{ base: "110%", md: "120%", lg: "100%" }}
+                w={{ base: "110%", md: "120%", lg: "100%" }}
+                h={'40vh'}
+                objectFit={'contain'}
               />
             </Box>
           );
