@@ -20,7 +20,19 @@ const SingleWomen = () => {
         // console.log(store)
         return store.ProductPageReducer
     })
-    const [save, setSave] = useState(0);
+    // const [save, setSave] = useState(0);
+
+    const token = localStorage.getItem("userToken")
+
+    const handleCart = ()=>{
+        if(!token.length){
+            console.log(token)
+            console.log("hellocart")
+        }else{
+            console.log("Please login");
+
+        }
+    }
 
     useEffect(() => {
         // dispatch(getSingleWomen(id)).then((res)=>{
@@ -30,7 +42,7 @@ const SingleWomen = () => {
         axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/products/womens/${id}`).then((res) => {
             // console.log(res.data)
             setData((prev) => prev = res.data)
-            setSave(+data[0].ogPrice - (+data[0].Price))
+            // setSave(+data[0].ogPrice - (+data[0].Price))
         }).catch((err) => console.log(err))
     }, [])
     // console.log(data)
@@ -105,7 +117,7 @@ const SingleWomen = () => {
                             <button>
                                 <AiOutlineHeart color=" #D3145A" size={"28px"} />
                             </button>
-                            <button>ADD TO CART</button>
+                            <button onClick={handleCart}>ADD TO CART</button>
                         </div>
                         <div className={styles.chart} id="chartDetail">
                             <p>SIZE CHART</p>
