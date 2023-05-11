@@ -200,7 +200,7 @@ const SingleMen = () => {
                                     <p>You Save</p>
                                     <div>
                                         <p>: ₹ </p>
-                                        <p> {dis} ({data[0].discount}%) </p>
+                                        <p> {dis} ({data[0].discount}%)</p>
                                     </div>
                                 </div>
                             </div>
