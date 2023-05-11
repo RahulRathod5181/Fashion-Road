@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  
 }
 
 .container form {
@@ -87,12 +88,12 @@ font-size:12px;
   margin-bottom: -150px;
   position: relative;
   height: 250px;
-  width: 400px;
+  width: 420px;
 }
 
 .container .card-container .front {
   position: absolute;
-  width: 90% ;
+  width: 85% ;
   /* height: 300px; */
   border:1px solid green;
   top: 0;
