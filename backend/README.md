@@ -41,11 +41,41 @@ https://clumsy-miniskirt-tuna.cyclic.app/*
 -         `${baseURL}/products/womens?discount=<discount number>`
 
 
-### products page product add endpoint
+### products page product add endpoint from admin page only
 -     `${baseURL}/products/addProduct`
-### products page product update endpoint
+### products page product update endpoint from admin page only
 -     `${baseURL}/products/updateProduct/:id`
-### products page product delete endpoint
+### products page product delete endpoint from admin page only
 -     `${baseURL}/products/deleteProduct/:id`
 
 
+### users page endpoint
+
+### users register
+-     `${baseURL}/users/register`
+### users login
+-     `${baseURL}/users/login/`
+### for get all users detail in admin page
+-     `${baseURL}/users`
+### for users delete in admin page
+-     `${baseURL}/users/delete/:id`
+
+
+### admin page endpoint
+### admin register
+-     `${baseURL}/admin/add`
+### admin login
+-     `${baseURL}/admin/login/`
+
+
+### cart page endpoint
+### cart product
+-     `${baseURL}/cart/`
+### cart add
+-     `${baseURL}/cart/add`
+### cart update
+-     `${baseURL}/cart/update/:id`
+### cart delete
+-     `${baseURL}/cart/delete/:id`
+### cart update
+-     `${baseURL}/admin/update/:id`

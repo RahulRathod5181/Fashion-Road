@@ -11,7 +11,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-const AdminCard = ({ image, title,_id, Price }) => {
+const UserCard = ({ image, title, id, price, category }) => {
   return (
     <div>
       <Card maxW="sm" mt={5} border={'1px solid black '} position={'static'} >
@@ -26,7 +26,7 @@ const AdminCard = ({ image, title,_id, Price }) => {
           />
           <Stack mt="6" spacing="3">
             <Text color="blue.600" fontSize="2xl">
-              ₹ {Price}
+              ₹ {price}
             </Text>
           </Stack>
         </CardBody>
@@ -34,7 +34,7 @@ const AdminCard = ({ image, title,_id, Price }) => {
         <CardFooter justifyContent={"space-between"} justifyItems={"center"}>
           <Button mr="20px" position={'static'}>
             {" "}
-            <Link to={`/editProduct/${_id}`}>Edit</Link>
+            <Link to={`/editProduct/${id}`}>Edit</Link>
           </Button>
           <Button position={'static'}>Delete</Button>
         </CardFooter>
@@ -43,4 +43,4 @@ const AdminCard = ({ image, title,_id, Price }) => {
   );
 };
 
-export default AdminCard;
+export default UserCard;

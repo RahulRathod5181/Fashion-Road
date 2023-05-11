@@ -5,13 +5,18 @@
     font-family: 'Roboto', sans-serif;
     background-color: rgba(0,0,0,.2);
 }
+.mediaPriceMain,.media{
+    display: none;
+}
+
 
 .main{
     width:85%;
     display: flex;
+    
     margin: auto;
     gap: 100px;
-    margin-top: 20px;
+    margin-top: 90px;
 }
 
 .left{
@@ -345,5 +350,118 @@
 .details p:nth-child(2){
     color: #666666;
     margin-bottom: 12px;
+}
+
+
+/* for mobile devices */
+@media (max-width: 480px){
+    .container{
+        background-color: white;
+    }
+    .main{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .left{
+        width:99%;
+        margin: auto;
+    }
+    .left>img{
+        width:100%;
+        height:65vh;
+    }
+    .right{
+        width:99%;
+        margin-left: 0px;
+    }
+    .right>p:nth-child(1){
+        font-size: 19px;
+    }
+    .share,.size{
+        /* visibility: hidden; */
+        display: none;
+    }
+    .sizeButton{
+        width: 68%;
+        /* padding-bottom: 50px; */
+    }
+    .mediaPriceMain{
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin-left: 20px;
+        margin-top: 16px;
+        font-weight: 600;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+
+    }
+    .priceMain{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .priceLeft{
+        width: 70%;
+    }
+    .priceRight{
+        width: 60%;
+    }
+    .priceRight>p:nth-child(1){
+        margin-top: 15px;
+        border: 1px solid #6FA40C;
+    
+        font-size: 15px;
+        width: 28%;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .cartButton{
+        display: none;
+    }
+    
+    .media{
+        display: block;
+        /* visibility: visible; */
+        width: 96%;
+        margin: auto;
+        display: flex;
+        gap: 8px;
+        position:sticky;
+        margin: auto;
+        height:60px;
+        top: 0%;
+        left: 0%;
+        bottom: 0px;
+        background-color: white;
+        /* opacity: .9; */
+    }
+    .media>div{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .media>div:nth-child(1){
+        border-right : 1px solid #eeeeee;
+        background-color: #D3145A;
+        color: white;
+    }
+    .media>div:nth-child(2){
+        border-left : 1px solid #eeeeee;
+        background-color: #9C3;
+        
+    }
+    .media button{
+        font-weight:bolder;
+        font-size: 16px;
+        
+    }
 }
 

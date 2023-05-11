@@ -20,7 +20,7 @@ import { reducer as cartPageReducer } from "./CartReducer/reducer";
 import { LandingReducer } from "./LandingPage/LandingReducer";
 import { userSignupReducer } from "./user/user signup/userSignupReducer";
 import { adminSignupReducer } from "./admin/admin signup/adminSignupReducer";
-
+import {adminUserReducer} from './admin/people/adminUserReducer'
 
 let rootReducer = combineReducers({
   ProductPageReducer,
@@ -36,6 +36,7 @@ let rootReducer = combineReducers({
   accessoriesReducer,
   userSignupReducer,
   adminSignupReducer,
+  adminUserReducer,
 });
 
 

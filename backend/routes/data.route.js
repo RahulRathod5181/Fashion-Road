@@ -8,10 +8,21 @@ const dataRoute=express.Router()
 //read kurta data
 dataRoute.get("/",async(req,res)=>{
     const query=req.query;
-    // console.log(query);
+    let count = 0;
+    for(let key in query){
+        count++
+    }
+    console.log(count);
     try {
-        const data= await FashionDataModel.find({category:query.occasion})
-        res.send(data)
+        if(count){
+
+            const data= await FashionDataModel.find({category:query.occasion})
+            res.send(data)
+        }
+        else{
+            const data= await FashionDataModel.find()
+            res.send(data)
+        }
         
     } catch (error) {
         res.send(error)

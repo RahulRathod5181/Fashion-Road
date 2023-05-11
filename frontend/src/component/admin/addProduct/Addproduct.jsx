@@ -156,8 +156,8 @@ const Addproduct = () => {
             name="gender"
             onChange={handleChange}
           >
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="mens">Male</option>
+            <option value="womens">Female</option>
             <option value="other">Other</option>
           </Select>
           <Button

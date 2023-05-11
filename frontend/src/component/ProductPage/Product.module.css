@@ -6,6 +6,7 @@
     display: flex;
     gap:5px;
     margin: auto;
+    margin-top: 120px;
 }
 .media{
     visibility: hidden;
@@ -17,8 +18,10 @@
     position:sticky;
     top: 0%;
     left: 0%;
+
     /* border:1px solid darkblue; */
 }
+
 
 .count>h2:nth-child(1){
     font-weight: bold;

@@ -7,21 +7,19 @@ import DebitCard from "./component/Rahul/PaymentPage/DebitCard";
 import OrderSucess from "./component/Rahul/PaymentPage/OrderSucess";
 import PaymentPage from "./component/Rahul/PaymentPage/PaymentPage";
 import { textTospeechFun } from "./component/Rahul/VoiceFun";
+import AdminUser from "./component/admin/admin user/AdminUser";
 import AllRoutes from "./component/utility/AllRoutes";
 import Footer from "./component/utility/Footer";
 
 function App() {
   return (
     <div className="App">
-  
-      <CartPage />
-<PaymentPage />
- 
- 
-     
+      {/* <CartPage /> */}
+      {/* <PaymentPage /> */}
+      {/* <AdminUser /> */}
       <AllRoutes />
       <Footer />
-    </div> 
+    </div>
   );
 }
 
