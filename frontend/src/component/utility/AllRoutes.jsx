@@ -15,6 +15,9 @@ import Kurta from "../landingPage/kurta list/Kurta";
 import Footwere from "../landingPage/footware list/Footwere";
 import Dress from "../landingPage/dresses list/Dress";
 import Accessories from "../landingPage/accessories list/Accessories";
+import CartPage from "../Rahul/Cart/CartPage";
+import PaymentPage from "../Rahul/PaymentPage/PaymentPage";
+import OrderSucess from "../Rahul/PaymentPage/OrderSucess";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -33,6 +36,9 @@ const AllRoutes = () => {
       <Route path="/footwereProduct" element={<Footwere />} />
       <Route path="/dressProduct" element={<Dress />} />
       <Route path="/accessoriesProduct" element={<Accessories />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/paymentPage" element={<PaymentPage />} />
+      <Route path="/orderSuccess" element={<OrderSucess />} />
     </Routes>
   );
 };
