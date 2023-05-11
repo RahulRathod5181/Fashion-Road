@@ -48,6 +48,7 @@ const CartPage = () => {
     console.log("navigate");
     navigate("/paymentPage");
   };
+  
 
   return (
     <Stack
@@ -149,6 +150,7 @@ const CartPage = () => {
             </Stack>
             {!tabView && (
               <Button
+            
                 variant={"solid"}
                 _active={{ all: "none" }}
                 _hover={{ boxShadow: "rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.2px" }}
@@ -166,7 +168,8 @@ const CartPage = () => {
               </Button>
             )}
             {tabView && (
-              <Stack
+              <Stack 
+             
                 direction={"row"}
                 position={"fixed"}
                 bottom={0}
@@ -184,7 +187,7 @@ const CartPage = () => {
                 </VStack>
                 <Button
                   variant={"solid"}
-                  // w={"20%"}
+                  w={"100%"}
                   _active={{ all: "none" }}
                   _hover={{
                     boxShadow: "rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.2px",
