@@ -67,7 +67,7 @@ const Product = () => {
         <div className={styles.right}>
 
           {productData?.map((el, i) => (
-            <div key={i + 1} className={styles.productCard} onClick={()=>handleSingle(el._id)}>
+            <div key={i + 1} className={styles.productCard} onClick={()=>handleSingle(el._id)} >
               <img src={el.image} alt={el.title} />
               <p>{el.title.toUpperCase().substring(0, 44)}</p>
               <p>By {el.brand}</p>

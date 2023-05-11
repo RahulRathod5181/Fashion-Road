@@ -12,25 +12,117 @@ import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import { async } from 'q';
 import Footer from '../utility/Footer';
+import { useToast } from '@chakra-ui/react';
+
+
+
+const getCart = (token) => {
+    return axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, {
+        headers: {
+            Authorization: token
+        }
+    })
+}
+
+const postCart = (token, obj) => {
+    return axios.post(`https://clumsy-miniskirt-tuna.cyclic.app/cart/add`, obj, { headers: { Authorization: token } })
+}
+
+
 const SingleWomen = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const [data, setData] = useState([])
-    const { productData, isLoading } = useSelector((store) => {
-        // console.log(store)
-        return store.ProductPageReducer
-    })
-    // const [save, setSave] = useState(0);
+    const [size, setSize] = useState("");
+    const [cart, setCart] = useState([]);
 
-    const token = localStorage.getItem("userToken")
+    const toast = useToast();
+    const statuses = ["success", "error", "warning", "info"];
+    const positions = ["top"];
 
-    const handleCart = ()=>{
-        if(!token.length){
-            console.log(token)
-            console.log("hellocart")
-        }else{
+
+    const handleSize = (payload) => {
+        console.log(payload)
+        setSize((prev) => prev = payload)
+
+
+    }
+
+
+    // const token = localStorage.getItem("userToken")
+    
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
+    
+
+    const handleCart = () => {
+        
+        if (token) {
+            // console.log(token)
+            // console.log("hellocart")
+            let obj = data[0]
+            obj.quantity = 1;
+            obj.size = size;
+            console.log(obj)
+            getCart(token).then((res) => {
+                // console.log(res.data)
+                setCart(res.data)
+            }).catch(err => console.log(err))
+                .finally(() => {
+                    let flag = true;
+                    for (let x of cart) {
+                        if (x._id == obj._id) {
+                            flag = false
+                            break
+                        }
+                    }
+                    if (flag && obj.size) {
+                        console.log("you can post")
+                        
+                        postCart(token, obj).then((res) => {
+                            console.log(res.data)
+                            toast({
+                                title: "Added To Cart",
+                                position: positions,
+                                status: statuses[0],
+                                isClosable: true,
+                                duration:1500
+                              });
+                        }).catch(err => console.log(err))
+
+                    } else if (!obj.size) {
+                        toast({
+                            title: "Select The Size",
+                            position: positions,
+                            status: statuses[2],
+                            color:"red",
+                            isClosable: true,
+                            duration:1500
+                          });
+                    }else{
+                        toast({
+                            title: "Already in the Cart",
+                            position: positions,
+                            status: statuses[2],
+                            background:"red",
+                            isClosable: true,
+                            duration:1500
+                          });
+                    }
+                })
+
+
+
+
+        } else {
             console.log("Please login");
-
+            toast({
+                title: "Please Login",
+                position: positions,
+                status: statuses[2],
+                background:"red",
+                isClosable: true,
+                duration:1500
+              });
         }
     }
 
@@ -73,10 +165,10 @@ const SingleWomen = () => {
                             <Link to="#chartDetail">Size Chart</Link>
                         </div>
                         <div className={styles.sizeButton}>
-                            <button>M</button>
-                            <button>L</button>
-                            <button>XL</button>
-                            <button>2XL</button>
+                            <button onClick={() => handleSize("M")}>M</button>
+                            <button onClick={() => handleSize("L")}>L</button>
+                            <button onClick={() => handleSize("XL")}>XL</button>
+                            <button onClick={() => handleSize("2XL")}>2XL</button>
                         </div>
                         <div className={styles.mediaPriceMain}>
                             <p>Product Price</p>
@@ -162,13 +254,13 @@ const SingleWomen = () => {
                     </div>
 
                 </div>
-                <Footer/>
+                <Footer />
                 <div className={styles.media}>
                     <div>
                         <button>BUY NOW</button>
                     </div>
                     <div>
-                        <button>ADD TO CART</button>
+                        <button onClick={handleCart}>ADD TO CART</button>
                     </div>
                 </div>
             </div>
