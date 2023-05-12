@@ -2,12 +2,20 @@ FASHION-ROAD.COM
 
 TEAM MEMBER :- RAHUL RATHOD , KUNAL DEOTALE , ANIMESH GHOROI , RAHUL SINGH KUSHWAH , SOURAV LAHIRI.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 TECH STACK :- REACT-JS , CHAKRA-UI , HTML , JAVASCRIPT , NOAD-JS , EXPRESS , MONGODB , REDUX , CSS.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 DEPLOY LINK :-
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 FashionRoad is an Indian e-commerce website that offers a wide range of fashion and lifestyle products for men, women, and kids. The website was launched in 2023 and has since become a popular destination for online shopping . FashionRoad offers a unique shopping experience with its scrapbook feature, where users can create their own styleboards and share them with other users. The website also offers a variety of payment options and fast delivery . In addition to fashion and lifestyle products.
 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CONTRIBUTION :- 
 
