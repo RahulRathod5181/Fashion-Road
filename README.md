@@ -1,4 +1,15 @@
-# finicky-scarecrow-1328
+FASHION-ROAD.COM
+
+TEAM MEMBER :- RAHUL RATHORD,KUNAL DEOTALE, ANIMESH GHOROI,RAHUL SINGH KUSHWAH,SOURAV LAHIRI.
+
+TECH STACK :- REACT-JS,CHAKRA-UI,HTML,JAVASCRIPT,NOAD-JS,EXPRESS,MONGODB,REDUX,CSS.
+
+DEPLOY LINK :-
+
+FashionRoad is an Indian e-commerce website that offers a wide range of fashion and lifestyle products for men, women, and kids. The website was launched in 2023 and has since become a popular destination for online shopping . FashionRoad offers a unique shopping experience with its scrapbook feature, where users can create their own styleboards and share them with other users. The website also offers a variety of payment options and fast delivery . In addition to fashion and lifestyle products.
+
+
+
 
 LANDING PAGE 
 
@@ -40,14 +51,14 @@ PAYMENT PAGE
 
 
 
-
+ADMIN DASHBOARD
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/7c3e40cf-cfa8-4611-960f-22ac771df5ac)
 
 
 
 
-
+ADD PRODUCT FORM
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/9819254d-29da-4af3-8f04-51e54a7a0acf)
 
@@ -55,7 +66,7 @@ PAYMENT PAGE
 
 
 
-
+ADMIN SIDE PRODUCT
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/89b07a06-8102-4003-ad9d-243cf236f5e0)
 
