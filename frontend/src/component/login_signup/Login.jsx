@@ -71,7 +71,7 @@ export default function Login() {
       //! ALLCLEAR GO FURTHER
     } else {
       dispatch(loginData(formState)).then(() => {
-        navigate(location.state, { replace: true });
+        // navigate(location.state, { replace: true });
       });
       // console.log(formState);
       setFormState(initialState);
@@ -81,7 +81,7 @@ export default function Login() {
         status: statuses[0],
         isClosable: true,
       });
-      // navigate("/");
+      navigate("/");
     }
   };
   return (

@@ -15,17 +15,21 @@ import Footer from '../utility/Footer';
 import { useToast } from '@chakra-ui/react';
 
 
+const token = JSON.parse(localStorage.getItem("userToken"));
+// const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJoYmgiLCJsYXN0TmFtZSI6ImZndCIsInVzZXJJRCI6IjY0NWUyODQ4ZjEwYzc1NTFkN2E0N2IzMSIsImlhdCI6MTY4Mzg5MjMwOX0.aVW5RSAkLDko0lUqORc9zYEtqlhFtJrKCU_XDM-WJMc"
 
-const getCart = (token) => {
-    return axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, {
-        headers: {
-            Authorization: token
-        }
-    })
+const getCart = () => {
+    // console.log(token)
+     return axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, {headers: {Authorization: token } })
+    //  .then((res)=>{
+    //     console.log(res.data)
+
+    // }).catch((err)=>{
+    //     console.log(err)
+    // })
 }
 
 const postCart = (token, obj) => {
-    console.log(token,obj)
     return axios.post(`https://clumsy-miniskirt-tuna.cyclic.app/cart/add`, obj, { headers: { Authorization: token } })
 }
 
@@ -44,8 +48,6 @@ const SingleWomen = () => {
 
 
     
-    const token = localStorage.getItem("userToken");
-    // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
     
     const handleSize = (payload) => {
         if(token){
@@ -76,19 +78,20 @@ const SingleWomen = () => {
 
 
     }
+    // const token2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
 
     // const token = token1 || token2
 
     const handleCart = () => {
         
         if (token) {
-            // console.log(token)
+            
             // console.log("hellocart")
             let obj = data[0]
             obj.quantity = 1;
             obj.size = size;
-            console.log(obj)
-            getCart(token).then((res) => {
+            // console.log(obj)
+            getCart().then((res) => {
                 // console.log(res.data)
                 setCart(res.data)
             }).catch(err => console.log(err))
@@ -102,17 +105,21 @@ const SingleWomen = () => {
                     }
                     if (flag && obj.size) {
                         console.log("you can post")
-                        
+                        console.log(token)
+                        delete obj._id
+                        console.log(obj)
+
                         postCart(token, obj).then((res) => {
                             console.log(res.data)
-                            toast({
-                                title: "Added To Cart",
-                                position: positions,
-                                status: statuses[0],
-                                isClosable: true,
-                                duration:1500
-                              });
+                            
                         }).catch(err => console.log(err))
+                        toast({
+                            title: "Added To Cart",
+                            position: positions,
+                            status: statuses[0],
+                            isClosable: true,
+                            duration:1500
+                          });
 
                     } else if (!obj.size) {
                         toast({
@@ -167,7 +174,9 @@ const SingleWomen = () => {
             // setSave(+data[0].ogPrice - (+data[0].Price))
         }).catch((err) => console.log(err))
     }, [])
+    
     // console.log(data)
+
     if (data.length) {
 
         var dis = data[0].ogPrice - data[0].Price

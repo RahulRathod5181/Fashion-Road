@@ -14,20 +14,24 @@ import Navbar2 from "../Navbar2";
 import { useNavigate } from "react-router-dom";
 import CartEmpty from "./CartEmpty";
 
+
+
 const CartPage = () => {
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
   const navigate = useNavigate();
 
   const [tabView] = useMediaQuery("(max-width: 990px)");
-  const { cartData } = useSelector((store) => {
+  const { cartData,isLoading } = useSelector((store) => {
     return store.cartPageReducer;
   });
   console.log(cartData);
   // const cartData = []
+
+
   useEffect(() => {
     dispatch(getCartProducts);
-  }, [totalPrice]);
+  }, [totalPrice,cartData.length]);
 
   useEffect(() => {
     const initialValue = 0;
