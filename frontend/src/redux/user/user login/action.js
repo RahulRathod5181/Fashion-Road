@@ -8,8 +8,10 @@ export const loginData = (payload) => async (dispatch) => {
       `https://clumsy-miniskirt-tuna.cyclic.app/users/login`,
       payload
     );
+
     localStorage.setItem("userToken", JSON.stringify(res.data.token));
     dispatch({ type: LOGIN_SUCCESS, payload: res.data.token });
+    return res
   } catch {
     dispatch({ type: LOGIN_FAILURE });
   }
