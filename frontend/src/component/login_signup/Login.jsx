@@ -6,7 +6,6 @@ import {
   Input,
   Checkbox,
   Stack,
-  Link,
   Button,
   Heading,
   Text,
@@ -14,7 +13,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { loginData } from "../../redux/user/user login/action";
 
@@ -28,7 +27,7 @@ export default function Login() {
   const statuses = ["success", "error", "warning", "info"];
   const positions = ["top"];
   const navigate = useNavigate();
-  // const location = useLocation();
+  const location = useLocation();
 
   const dispatch = useDispatch();
 
@@ -36,9 +35,7 @@ export default function Login() {
     return store.userLoginReducer;
   });
 
-  console.log(token,isAuth)
-
-  
+  console.log(token, isAuth);
 
   //! HANDLECHANGE FUNCTION
 
@@ -74,7 +71,7 @@ export default function Login() {
       //! ALLCLEAR GO FURTHER
     } else {
       dispatch(loginData(formState)).then(() => {
-        navigate(location.state,{replace:true})
+        navigate(location.state, { replace: true });
       });
       // console.log(formState);
       setFormState(initialState);
@@ -152,6 +149,14 @@ export default function Login() {
                   Log-in
                 </Button>
               </Stack>
+            </Stack>
+            <Stack pt={6}>
+              <Text align={"center"}>
+                Not a user?{" "}
+                <Link to="/signup" style={{ color: "blue" }}>
+                  signUp
+                </Link>
+              </Text>
             </Stack>
           </Box>
         </Stack>

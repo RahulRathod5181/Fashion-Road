@@ -83,7 +83,7 @@ export default function LandingCrousel() {
               <Image
                 src={card.image}
                 w={{ base: "110%", md: "120%", lg: "100%" }}
-                h={'40vh'}
+                h={{ base: "15vh",md:'20vh', lg: "40vh" }}
                 objectFit={'contain'}
               />
             </Box>

@@ -42,10 +42,9 @@ export default function AdminSignup() {
   //!THIS IS HANDLE CHANGE FUNCTION ONLY
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if(name==='age'){
-      
+    if (name === "age") {
       setFormState({ ...formState, [name]: +value });
-    }else{
+    } else {
       setFormState({ ...formState, [name]: value });
     }
   };
@@ -89,7 +88,7 @@ export default function AdminSignup() {
         status: statuses[0],
         isClosable: true,
       });
-      navigate("/adminlogin");
+      // navigate("/adminlogin");
     }
   };
 

@@ -36,7 +36,7 @@ const Product = () => {
   }
   const handleSingle = (id)=>{
     // console.log(id)
-    nav(`/mens/${id}`)
+    nav(`/mens/${id}`);
   }
 
   useEffect(() => {

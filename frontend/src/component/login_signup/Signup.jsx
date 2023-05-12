@@ -90,7 +90,7 @@ export default function Signup() {
     <>
       <Navbar />
       <Flex
-      mt={10}
+        mt={10}
         minH={"100vh"}
         align={"center"}
         justify={"center"}
@@ -118,8 +118,8 @@ export default function Signup() {
                     <FormLabel>First Name</FormLabel>
                     <Input
                       type="text"
-                      name="fristName"
-                      value={formState.fristName}
+                      name="firstName"
+                      value={formState.firstName}
                       onChange={handleChange}
                     />
                   </FormControl>

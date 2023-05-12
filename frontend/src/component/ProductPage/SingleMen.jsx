@@ -4,7 +4,7 @@ import { BsFillShareFill } from 'react-icons/bs';
 import { BsWhatsapp } from 'react-icons/bs';
 import { BsFillHeartFill } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { color } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSingleWomen } from '../../redux/ProductPageReducer/action';
@@ -25,41 +25,59 @@ const getCart = (token) => {
 }
 
 const postCart = (token, obj) => {
+    console.log(token,obj)
     return axios.post(`https://clumsy-miniskirt-tuna.cyclic.app/cart/add`, obj, { headers: { Authorization: token } })
 }
 
 
-const SingleMen = () => {
+const SingleWomen = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const [data, setData] = useState([])
     const [size, setSize] = useState("");
     const [cart, setCart] = useState([]);
+    const nav = useNavigate()
 
     const toast = useToast();
     const statuses = ["success", "error", "warning", "info"];
     const positions = ["top"];
 
 
+    
+    const token = localStorage.getItem("userToken");
+    // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
+    
     const handleSize = (payload) => {
-        console.log(payload)
-        setSize((prev) => prev = payload)
-        toast({
-            title: `You Select ${payload} Size          `,
-            position: positions,
-            status: statuses[3],
-            isClosable: true,
-            duration:1500
-          });
+        if(token){
+
+            console.log(payload)
+            setSize((prev) => prev = payload)
+            toast({
+                title: `You Select ${payload} Size          `,
+                position: positions,
+                status: statuses[3],
+                isClosable: true,
+                duration:1500
+              });
+        }else{
+            toast({
+                title: "Please Login",
+                position: positions,
+                status: statuses[2],
+                background:"red",
+                isClosable: true,
+                duration:1000
+              });
+              setTimeout(()=>{
+
+                  nav("/login")
+              },1400)
+        }
 
 
     }
 
-
-    // const token = localStorage.getItem("userToken")
-    
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
-    
+    // const token = token1 || token2
 
     const handleCart = () => {
         
@@ -128,8 +146,13 @@ const SingleMen = () => {
                 status: statuses[2],
                 background:"red",
                 isClosable: true,
-                duration:1500
+                duration:1000
               });
+              setTimeout(()=>{
+
+                  nav("/login")
+              },1400)
+
         }
     }
 
@@ -138,12 +161,12 @@ const SingleMen = () => {
         //     setSave(productData[0].ogPrice-productData[0].Price)
         //     setData([...productData])
         // }).catch(err=>console.log(err.message))
-        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/products/womens/${id}`).then((res) => {
+        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/products/mens/${id}`).then((res) => {
             // console.log(res.data)
             setData((prev) => prev = res.data)
             // setSave(+data[0].ogPrice - (+data[0].Price))
         }).catch((err) => console.log(err))
-    }, [size])
+    }, [])
     // console.log(data)
     if (data.length) {
 
@@ -276,4 +299,4 @@ const SingleMen = () => {
 
 }
 
-export default SingleMen
+export default SingleWomen
