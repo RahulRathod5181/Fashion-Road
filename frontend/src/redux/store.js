@@ -1,12 +1,6 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import thunk from "redux-thunk";
 
-
-
-
-
-
-
 import { reducer as ProductPageReducer } from "./ProductPageReducer/reducer";
 import { userLoginReducer } from "./user/user login/userLoginReducer";
 import { adminProductReducer } from "./admin/admin product/adminProductReducer";
@@ -20,8 +14,8 @@ import { reducer as cartPageReducer } from "./CartReducer/reducer";
 import { LandingReducer } from "./LandingPage/LandingReducer";
 import { userSignupReducer } from "./user/user signup/userSignupReducer";
 import { adminSignupReducer } from "./admin/admin signup/adminSignupReducer";
-import {adminUserReducer} from './admin/people/adminUserReducer'
-
+import { adminUserReducer } from "./admin/people/adminUserReducer";
+import { adminLoginReducer } from "./admin/admin login/adminLoginReducer";
 let rootReducer = combineReducers({
   ProductPageReducer,
   cartPageReducer,
@@ -37,7 +31,7 @@ let rootReducer = combineReducers({
   userSignupReducer,
   adminSignupReducer,
   adminUserReducer,
+  adminLoginReducer,
 });
-
 
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));

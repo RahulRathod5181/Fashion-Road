@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../../../redux/admin/admin product/action";
 const AdminProduct = () => {
   const dispatch = useDispatch();
-  console.log("hello world");
+  // console.log("hello world");
   const { isLoading, adminProducts } = useSelector((store) => {
     return store.adminProductReducer;
   });
@@ -14,7 +14,7 @@ const AdminProduct = () => {
     dispatch(getData);
   }, []);
 
-  console.log(adminProducts);
+  // console.log(adminProducts);
 
   if (isLoading) {
     return (

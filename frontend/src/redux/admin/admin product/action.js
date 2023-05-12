@@ -8,6 +8,7 @@ import {
   DELETE_REQUEST_SUCCESS,
 } from "./actionType";
 
+const token = localStorage.getItem("adminToken");
 export const getData = (dispatch) => {
   dispatch({ type: REQUEST_LOADING });
 
@@ -23,14 +24,15 @@ export const getData = (dispatch) => {
 
 export const addProduct = (payload) => (dispatch) => {
   dispatch({ type: REQUEST_LOADING });
-
+  console.log(payload);
   axios
     .post(
       `https://clumsy-miniskirt-tuna.cyclic.app/products/addProduct`,
       payload,
-      { headers: { Authorization: `${localStorage.getItem("adminToken")}` } }
+      { headers: { Authorization: `${token}` } }
     )
-    .then(() => {
+    .then((res) => {
+      console.log(res.data);
       dispatch({ type: ADD_REQUEST_SUCCESS });
     })
     .catch((err) => {
@@ -40,14 +42,16 @@ export const addProduct = (payload) => (dispatch) => {
 
 export const editProduct = (payload, id) => (dispatch) => {
   dispatch({ type: REQUEST_LOADING });
+  console.log(payload, id);
 
   axios
     .patch(
       `https://clumsy-miniskirt-tuna.cyclic.app/products/updateProduct/${id}`,
       payload,
-      { headers: { Authorization: `${localStorage.getItem("adminToken")}` } }
+      { headers: { Authorization: `${token}` } }
     )
-    .then(() => {
+    .then((res) => {
+      console.log(res.data);
       dispatch({ type: PATCH_REQUEST_SUCCESS });
     })
     .catch((err) => {
@@ -57,14 +61,16 @@ export const editProduct = (payload, id) => (dispatch) => {
 
 export const deleteProduct = (id) => (dispatch) => {
   dispatch({ type: REQUEST_LOADING });
-
+  console.log(id);
+  console.log(token)
   axios
     .delete(
       `https://clumsy-miniskirt-tuna.cyclic.app/products/deleteProduct/${id}`,
 
-      { headers: { Authorization: `${localStorage.getItem("adminToken")}` } }
+      { headers: { Authorization: token } }
     )
-    .then(() => {
+    .then((res) => {
+      console.log(res.data);
       dispatch({ type: DELETE_REQUEST_SUCCESS });
     })
     .catch((err) => {
