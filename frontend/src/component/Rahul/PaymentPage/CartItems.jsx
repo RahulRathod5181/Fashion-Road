@@ -1,12 +1,12 @@
 import { Box, CloseButton, Image, Select, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
-const CartItems = ({ Price, brand ,discount  ,firstName  ,gender  ,image  ,lastName  ,offerType  ,ogPrice  ,title  ,userID  ,_id}) => {
+const CartItems = ({ Price, brand ,discount  ,firstName  ,gender ,quantity,size, image  ,lastName  ,offerType  ,ogPrice  ,title  ,userID  ,_id}) => {
 
 
 
 
-
+// console.log('cartitem');
 
   return (
     <Stack
@@ -25,7 +25,7 @@ const CartItems = ({ Price, brand ,discount  ,firstName  ,gender  ,image  ,lastN
         h={'150px'}
         objectFit={'fill'}
         src={image}
-        alt=""
+        alt="g"
       />
       <Stack 
         w={"100%"}
@@ -37,11 +37,11 @@ const CartItems = ({ Price, brand ,discount  ,firstName  ,gender  ,image  ,lastN
       >
         <Stack  p={"10px 0"}>
           <Text  fontSize={"15px"}>{title}</Text>
-           <Text  lineHeight={'5px'} fontSize={"15px"}>quantity : 1</Text>
+           <Text  lineHeight={'5px'} fontSize={"15px"}>quantity : {quantity}</Text>
             <Text >
             size :{" "}
             <Text as={"span"}  fontSize={"15px"}>
-              fdsfd
+              {size}
             </Text>{" "}
           </Text>
         </Stack>

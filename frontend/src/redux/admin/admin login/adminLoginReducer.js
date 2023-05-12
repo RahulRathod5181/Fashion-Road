@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const adminLoginReducer = (state = initialState, action) => {
-  const { type, payload } = action;
+  const { type} = action;
   switch (type) {
     case LOGIN_REQUEST:
       return {
@@ -20,7 +20,7 @@ export const adminLoginReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        token: payload,
+        // token: payload,
         isAuth: true,
       };
 

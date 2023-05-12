@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CreditCard.css";
 import { useCallback, useRef, useState } from "react";
 
@@ -28,6 +28,14 @@ const CreditCard = ({handleFinalSubmit}) => {
 
     [frontRef, backRef]
   );
+
+useEffect(() => {
+  
+  localStorage.setItem('cvv',cvv)
+}, [cvv])
+
+
+
 
   return (
     <div>
@@ -85,8 +93,8 @@ const CreditCard = ({handleFinalSubmit}) => {
 
         {/* form for user input */}
 
-        <form action="" >
-          <div className="inputBox">
+        <form >
+          <div style={{marginTop:'25px'}} className="inputBox">
             <span>card number</span>
             <input
               value={cardNumber}

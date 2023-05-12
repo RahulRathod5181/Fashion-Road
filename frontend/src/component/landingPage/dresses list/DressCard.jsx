@@ -30,7 +30,7 @@ const DressCard = ({ poster, profile, seller, followers, title }) => {
     setLike(true);
   };
   return (
-    <Card maxW="sm" border={'1px solid black '} mb={5}>
+    <Card maxW="sm">
       <CardBody>
         <Text
           maxBlockSize={5}

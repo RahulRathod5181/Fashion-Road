@@ -4,7 +4,7 @@ import { BsFillShareFill } from 'react-icons/bs';
 import { BsWhatsapp } from 'react-icons/bs';
 import { BsFillHeartFill } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { color } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSingleWomen } from '../../redux/ProductPageReducer/action';
@@ -15,107 +15,149 @@ import Footer from '../utility/Footer';
 import { useToast } from '@chakra-ui/react';
 
 
+const token = JSON.parse(localStorage.getItem("userToken"));
+// const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJoYmgiLCJsYXN0TmFtZSI6ImZndCIsInVzZXJJRCI6IjY0NWUyODQ4ZjEwYzc1NTFkN2E0N2IzMSIsImlhdCI6MTY4Mzg5MjMwOX0.aVW5RSAkLDko0lUqORc9zYEtqlhFtJrKCU_XDM-WJMc"
 
-const getCart = (token) => {
-    return axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, {
-        headers: {
-            Authorization: token
-        }
-    })
-}
+// const getCart = () => {
+//     // console.log(token)
+//     return axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, { headers: { Authorization: token } })
+//     //  .then((res)=>{
+//     //     console.log(res.data)
+
+//     // }).catch((err)=>{
+//     //     console.log(err)
+//     // })
+// }
 
 const postCart = (token, obj) => {
     return axios.post(`https://clumsy-miniskirt-tuna.cyclic.app/cart/add`, obj, { headers: { Authorization: token } })
 }
 
 
-const SingleMen = () => {
+const SingleWomen = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const [data, setData] = useState([])
     const [size, setSize] = useState("");
     const [cart, setCart] = useState([]);
+    const [check,setCheck] = useState(false)
+    const nav = useNavigate()
 
     const toast = useToast();
     const statuses = ["success", "error", "warning", "info"];
     const positions = ["top"];
 
 
+
+
     const handleSize = (payload) => {
-        console.log(payload)
-        setSize((prev) => prev = payload)
-        toast({
-            title: `You Select ${payload} Size          `,
-            position: positions,
-            status: statuses[3],
-            isClosable: true,
-            duration:1500
-          });
+        const token = JSON.parse(localStorage.getItem("userToken"));
+        if (token) {
+
+            console.log(payload)
+            setSize((prev) => prev = payload)
+            toast({
+                title: `You Select ${payload} Size          `,
+                position: positions,
+                status: statuses[3],
+                isClosable: true,
+                duration: 1500
+            });
+        } else {
+            toast({
+                title: "Please Login",
+                position: positions,
+                status: statuses[2],
+                background: "red",
+                isClosable: true,
+                duration: 1000
+            });
+            setTimeout(() => {
+
+                nav("/login")
+            }, 1400)
+        }
 
 
     }
+    // const token2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
 
-
-    // const token = localStorage.getItem("userToken")
-    
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
-    
+    // const token = token1 || token2
 
     const handleCart = () => {
-        
+        const token = JSON.parse(localStorage.getItem("userToken"));
+        setCheck(!check)
         if (token) {
-            // console.log(token)
+
             // console.log("hellocart")
             let obj = data[0]
+
             obj.quantity = 1;
             obj.size = size;
-            console.log(obj)
-            getCart(token).then((res) => {
-                // console.log(res.data)
-                setCart(res.data)
-            }).catch(err => console.log(err))
-                .finally(() => {
+
+                // setCart((prev)=>prev=res.data)
+
                     let flag = true;
                     for (let x of cart) {
-                        if (x._id == obj._id) {
+                        if (x.Price == obj.Price && x.ogPrice==obj.ogPrice && x.size==obj.size) {
                             flag = false
                             break
                         }
                     }
                     if (flag && obj.size) {
+                        console.log(cart)
+                        console.log(obj.size)
                         console.log("you can post")
+                        console.log(token)
+                        delete obj._id
                         
+
+                        // console.log(obj)
+                        // const newObj = {
+                        //     Price: obj.price,
+                        //     brand: obj.brand,
+                        //     discount: obj.discount,
+                        //     gender: obj.gender,
+                        //     image: obj.image,
+                        //     offerType: obj.offerType,
+                        //     ogPrice: obj.ogPrice,
+                        //     quantity: 1,
+                        //     size:obj.size,
+                        //     title:obj.title
+                        // }
                         postCart(token, obj).then((res) => {
                             console.log(res.data)
-                            toast({
-                                title: "Added To Cart",
-                                position: positions,
-                                status: statuses[0],
-                                isClosable: true,
-                                duration:1500
-                              });
+                            window.location.reload()
+                            obj.size=""
                         }).catch(err => console.log(err))
+                        toast({
+                            title: "Added To Cart",
+                            position: positions,
+                            status: statuses[0],
+                            isClosable: true,
+                            duration: 1500
+                        });
 
                     } else if (!obj.size) {
                         toast({
                             title: "Select The Size",
                             position: positions,
                             status: statuses[2],
-                            color:"red",
+                            color: "red",
                             isClosable: true,
-                            duration:1500
-                          });
-                    }else{
+                            duration: 1500
+                        });
+                    } else {
                         toast({
                             title: "Already in the Cart",
                             position: positions,
                             status: statuses[2],
-                            background:"red",
+                            background: "red",
                             isClosable: true,
-                            duration:1500
-                          });
+                            duration: 1500
+                        });
                     }
-                })
+                
 
 
 
@@ -126,10 +168,16 @@ const SingleMen = () => {
                 title: "Please Login",
                 position: positions,
                 status: statuses[2],
-                background:"red",
+                background: "red",
                 isClosable: true,
-                duration:1500
-              });
+                duration: 1000
+            });
+            console.log(token)
+            setTimeout(() => {
+
+                nav("/login")
+            }, 1400)
+
         }
     }
 
@@ -138,13 +186,18 @@ const SingleMen = () => {
         //     setSave(productData[0].ogPrice-productData[0].Price)
         //     setData([...productData])
         // }).catch(err=>console.log(err.message))
-        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/products/womens/${id}`).then((res) => {
+        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/products/mens/${id}`).then((res) => {
             // console.log(res.data)
             setData((prev) => prev = res.data)
             // setSave(+data[0].ogPrice - (+data[0].Price))
         }).catch((err) => console.log(err))
-    }, [size])
+        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, { headers: { Authorization: token } }).then((res)=>{
+            setCart((prev)=>prev=res.data)
+        }).catch((err)=>console.log(err))
+    }, [check,size])
+
     // console.log(data)
+
     if (data.length) {
 
         var dis = data[0].ogPrice - data[0].Price
@@ -276,4 +329,4 @@ const SingleMen = () => {
 
 }
 
-export default SingleMen
+export default SingleWomen

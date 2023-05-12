@@ -1,72 +1,95 @@
-import { Box, Button,Image,  Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import { Button, Stack, Text, useMediaQuery } from "@chakra-ui/react";
+import React, { useEffect } from "react";
 import AddressForm from "./AddressForm";
 import CartItems from "./CartItems";
 import DebitCard from "./DebitCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import Navbar2 from "../Navbar2";
+import { getCartProducts } from "../../../redux/CartReducer/action";
+import { useNavigate } from "react-router-dom";
 
 const PaymentPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
- 
+  const [tabView] = useMediaQuery("(max-width: 1105px)");
+
+  useEffect(() => {
+    dispatch(getCartProducts);
+  }, []);
 
   const { cartData } = useSelector((store) => {
+    // console.log('store', store);
     return store.cartPageReducer;
   });
-  console.log(cartData);
-
+  // console.log(cartData);
 
   return (
     <Stack
       spacing={"0"}
       h={"100%"}
       overflow={"hidden"}
-      bgColor={"red"}
-      border={"1px solid red"}
+      // bgColor={"red"}
+      // border={"1px solid red"}
     >
-      <Box
-        position={"fixed"}
-        top={"0"}
-        bgColor={"teal"}
-        zIndex={"2"}
-        style={{ width: "100%", height: "8vh" }}
-      >
-        Navbar
-      </Box>
-
-      <Stack bgColor={"#eeeeee"} w={"100%"} p={"3rem 8rem 0"} direction={"row"}>
-        <Stack p={"15px"} w={"50%"} h={"90vh"} overflowY={"scroll"}>
+      <Navbar2 />
+      <Stack bgColor={"#eeeeee"} w={"100vw"} 
+      p={"3rem 8rem 0"} 
+      pl={{ base: "0.3rem", sm: "0.3rem", md: "0.3rem", lg: "8rem" }}
+      pr={{ base: "0.3rem", sm: "0.3rem", md: "0.3rem", lg: "8rem" }}
+      direction={{ base: "column", sm: "column", md: "column", lg: "row" } }>
+        <Stack
+         p={"15px"} 
+        // w={"50%"} 
+        w={{ base: "100%", sm: "100%", md: "100%", lg: "50%" }} 
+        h={"90vh"}
+         overflowY={"scroll"}>
           <Text mt={"20px"} fontSize={"19px"}>
             Please Fill Address For Shipping
           </Text>
 
-          <AddressForm  />
+          <AddressForm />
           <Text mt={"20px"} fontSize={"19px"}>
-            Cart Items (5)
+            Cart Items ({cartData.length})
           </Text>
           <Stack>
-            {cartData.map((e,i)=> <CartItems key={i} {...e} />)}
+            {cartData.map((e, i) => (
+              <CartItems key={i} {...e} />
+            ))}
             {/* <CartItems />
             <CartItems />
             <CartItems />
             <CartItems /> */}
           </Stack>
-          <Button bgColor={"white"} borderRadius={"0"} m={0} p={"10px"}>
+          <Button
+            onClick={() => navigate("/cart")}
+            bgColor={"white"}
+            borderRadius={"0"}
+            m={0}
+            p={"10px"}
+          >
             EDIT CART
           </Button>
         </Stack>
 
         <Stack
-          p={"2rem 2rem"}
-          w={"60%"}
+          p={"2rem 0"}
+          pl={ { base: "0.3rem", sm: "0.3rem", md: "0.3rem", lg: "2rem" }}
+          pr={ { base: "0.3rem", sm: "0.3rem", md: "0.3rem", lg: "2rem" }}
+          w={{ base: "100%", sm: "100%", md: "100%", lg: "60%" }}
           bgColor={"white"}
-          h={"90vh"}
+          // h={"90vh"}
+          h={{ base: "500px", sm: "500px", md: "500px", lg: "90vh" }}
           position={"sticky"}
           top={"10%"}
-          left={"50%"}
+          // left={"50%"}
+          left={{ base: "0.3rem", sm: "0.3rem", md: "0.3rem", lg: "50%" }}
         >
-          <Text mt={"20px"} fontSize={"19px"}> Payment Mode</Text>
-          <DebitCard />
-     
+          <Text mt={"20px"} fontSize={"19px"}>
+            {" "}
+            Payment Mode
+          </Text>
+          <DebitCard  />
         </Stack>
       </Stack>
     </Stack>

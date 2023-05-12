@@ -12,9 +12,17 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { FaHeart, FaRegHeart, FaWhatsapp } from "react-icons/fa";
-const LandingCard = ({ poster, profile, seller, followers, title, price,likes }) => {
-  const toast = useToast()
-  const statuses = [ 'info']
+const LandingCard = ({
+  poster,
+  profile,
+  seller,
+  followers,
+  title,
+  price,
+  likes,
+}) => {
+  const toast = useToast();
+  const statuses = ["info"];
   const positions = ["top"];
   const [like, setLike] = useState(true);
 
@@ -29,23 +37,22 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
   };
   const handleTwo = () => {
     setLike(true);
-    
   };
   return (
-    <Card maxW="sm" border={'1px solid gray.400 '}>
+    <Card maxW="sm" border={"1px solid gray.400 "}>
       <CardBody>
         <Text
           maxBlockSize={5}
           fontWeight={600}
           color={"blackAlpha.900"}
-          mb={"3"}
+         
           // textAlign={'center'}
         >
           {title}
         </Text>
         <Image src={poster} alt="Green double couch with wooden legs" />
-        <Flex mt="3" justifyContent={"space-between"} justifyItems={"center"} >
-          <Box display={"flex"} >
+        <Flex mt="3" justifyContent={"space-between"} justifyItems={"center"}>
+          <Box display={"flex"}>
             {/* THIS IS PROFILE SECTION */}
 
             <WrapItem>
@@ -54,12 +61,8 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
             <Box>
               {/* THIS IS NAME AND FOLLOWER SECTION */}
 
-              <Text ml={2}>
-                {seller}
-              </Text>
-              <Text ml={2} >
-                {followers} Followers
-              </Text>
+              <Text ml={2}>{seller}</Text>
+              <Text ml={2}>{followers} Followers</Text>
             </Box>
           </Box>
           <Box>
@@ -79,12 +82,10 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
                   color="red"
                   size={"35px"}
                   alignSelf={"center"}
-                  
                 />
-                
               )}
-              <Box ml={5} >
-              <FaWhatsapp color="green" size={"35px"} alignSelf={"center"} />
+              <Box ml={5}>
+                <FaWhatsapp color="green" size={"35px"} alignSelf={"center"} />
               </Box>
             </Text>
           </Box>
