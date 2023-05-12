@@ -16,33 +16,26 @@ import Footwere from "../landingPage/footware list/Footwere";
 import Dress from "../landingPage/dresses list/Dress";
 import Accessories from "../landingPage/accessories list/Accessories";
 
-import PrivateAdminRoute from "./PrivateAdminRoute";
+
 import PrivateUserRoute from "./PrivateUserRoute";
 
-import MensProduct from "../ProductPage/MensProduct"
-import WomensProduct from "../ProductPage/WomensProduct"
+import MensProduct from "../ProductPage/MensProduct";
+import WomensProduct from "../ProductPage/WomensProduct";
 import SingleWomen from "../ProductPage/SingleWomen";
 
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/mens" element={<MensProduct/>}></Route>
-      <Route path="/womens" element={<WomensProduct/>}></Route>
-      <Route path="womens/:id" element={<SingleWomen/>}></Route>
+      <Route path="/mens" element={<MensProduct />}></Route>
+      <Route path="/womens" element={<WomensProduct />}></Route>
+      <Route path="womens/:id" element={<SingleWomen />}></Route>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/adminsignup" element={<AdminSignup />} />
       <Route path="/" element={<Landing />} />
       <Route path="/adminAddproduct" element={<Addproduct />} />
-      <Route
-        path="/adminDashboard"
-        element={
-          <PrivateAdminRoute>
-            <Dashboard />
-          </PrivateAdminRoute>
-        }
-      />
+      <Route path="/adminDashboard" element={<Dashboard />} />
       <Route path="/adminProduct" element={<Product />} />
       <Route path="/editProduct/:id" element={<EditProduct />} />
       <Route path="/shirtProduct" element={<Shirt />} />

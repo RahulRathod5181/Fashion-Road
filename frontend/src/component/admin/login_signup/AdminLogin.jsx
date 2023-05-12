@@ -6,7 +6,6 @@ import {
   Input,
   Checkbox,
   Stack,
-  Link,
   Button,
   Heading,
   Text,
@@ -15,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { loginData } from "../../../redux/admin/admin login/action";
 const initialState = {
   email: "",
@@ -27,14 +26,15 @@ export default function AdminLogin() {
   const statuses = ["success", "error", "warning", "info"];
   const positions = ["top"];
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
   const dispatch = useDispatch();
 
   const { isAuth, token } = useSelector((store) => {
     return store.userLoginReducer;
   });
 
-  // console.log(token)
+  // console.log(token);
+  // console.log(isAuth);
 
   //! HANDLECHANGE FUNCTION
 
@@ -78,8 +78,9 @@ export default function AdminLogin() {
         status: statuses[0],
         isClosable: true,
       });
-
+      console.log("navigate start");
       navigate("/adminDashboard");
+      console.log("navigate end");
     }
   };
   return (
@@ -146,6 +147,14 @@ export default function AdminLogin() {
                 Log-in
               </Button>
             </Stack>
+          </Stack>
+          <Stack pt={6}>
+            <Text align={"center"}>
+              Not a user?{" "}
+              <Link to="/adminsignup" style={{ color: "blue" }}>
+                signUp
+              </Link>
+            </Text>
           </Stack>
         </Box>
       </Stack>
