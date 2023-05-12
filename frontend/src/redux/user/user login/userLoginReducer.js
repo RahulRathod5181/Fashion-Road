@@ -20,7 +20,7 @@ export const userLoginReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        token: payload,
+        // token: payload,
         isAuth: true,
       };
 
