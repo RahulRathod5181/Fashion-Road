@@ -29,7 +29,7 @@ const postCart = (token, obj) => {
 }
 
 
-const SingleWomen = () => {
+const SingleMen = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const [data, setData] = useState([])
@@ -44,15 +44,24 @@ const SingleWomen = () => {
     const handleSize = (payload) => {
         console.log(payload)
         setSize((prev) => prev = payload)
+        toast({
+            title: `You Select ${payload} Size          `,
+            position: positions,
+            status: statuses[3],
+            isClosable: true,
+            duration:1500
+          });
 
 
     }
+
 
     const token1 = localStorage.getItem("userToken");
     
     const token2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
 
     const token = token1 || token2
+    
 
     const handleCart = () => {
         
@@ -136,7 +145,7 @@ const SingleWomen = () => {
             setData((prev) => prev = res.data)
             // setSave(+data[0].ogPrice - (+data[0].Price))
         }).catch((err) => console.log(err))
-    }, [])
+    }, [size])
     // console.log(data)
     if (data.length) {
 
@@ -269,4 +278,4 @@ const SingleWomen = () => {
 
 }
 
-export default SingleWomen
+export default SingleMen

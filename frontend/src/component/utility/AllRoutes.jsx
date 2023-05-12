@@ -17,6 +17,13 @@ import Dress from "../landingPage/dresses list/Dress";
 import Accessories from "../landingPage/accessories list/Accessories";
 
 
+
+
+import CartPage from "../Rahul/Cart/CartPage";
+import PaymentPage from "../Rahul/PaymentPage/PaymentPage";
+import OrderSucess from "../Rahul/PaymentPage/OrderSucess";
+
+
 import PrivateUserRoute from "./PrivateUserRoute";
 
 import MensProduct from "../ProductPage/MensProduct";
@@ -44,6 +51,9 @@ const AllRoutes = () => {
       <Route path="/footwereProduct" element={<Footwere />} />
       <Route path="/dressProduct" element={<Dress />} />
       <Route path="/accessoriesProduct" element={<Accessories />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/paymentPage" element={<PaymentPage />} />
+      <Route path="/orderSuccess" element={<OrderSucess />} />
     </Routes>
   );
 };

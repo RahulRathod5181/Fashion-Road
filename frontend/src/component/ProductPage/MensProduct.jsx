@@ -7,7 +7,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { BsWhatsapp } from 'react-icons/bs';
 import { HiFilter } from 'react-icons/hi';
 import { BiSortAlt2 } from 'react-icons/bi';
-import { useLocation, useSearchParams } from 'react-router-dom'
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { Spinner } from '@chakra-ui/react'
 import Navbar from '../Navbar/Navbar'
 import SidebarMen from './SiebarMen'
@@ -25,7 +25,7 @@ const Product = () => {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const dispatch = useDispatch()
-
+  const nav = useNavigate()
   let obj = {
     params: {
       discount: searchParams.getAll("discount"),
@@ -33,6 +33,10 @@ const Product = () => {
       offers: searchParams.getAll("offers"),
       price:searchParams.get("price")
     }
+  }
+  const handleSingle = (id)=>{
+    // console.log(id)
+    nav(`/mens/${id}`);
   }
 
   useEffect(() => {
@@ -63,7 +67,7 @@ const Product = () => {
         <div className={styles.right}>
 
           {productData?.map((el, i) => (
-            <div key={i + 1} className={styles.productCard}>
+            <div key={i + 1} className={styles.productCard} onClick={()=>handleSingle(el._id)} >
               <img src={el.image} alt={el.title} />
               <p>{el.title.toUpperCase().substring(0, 44)}</p>
               <p>By {el.brand}</p>

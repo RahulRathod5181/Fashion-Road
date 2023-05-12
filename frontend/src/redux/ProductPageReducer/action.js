@@ -2,6 +2,9 @@ import { GET_DATA, GET_DATA_ERROR, GET_DATA_REQUEST } from "./actionTypes"
 import axios from "axios"
 
 
+=
+
+
 export const getProductWomen = (query)=>(dispatch)=>{
     // console.log(data)
     // dispatch({type:GET_DATA,payload:data});
