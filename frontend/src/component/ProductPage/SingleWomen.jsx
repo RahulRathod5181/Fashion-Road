@@ -4,7 +4,7 @@ import { BsFillShareFill } from 'react-icons/bs';
 import { BsWhatsapp } from 'react-icons/bs';
 import { BsFillHeartFill } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { color } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSingleWomen } from '../../redux/ProductPageReducer/action';
@@ -35,24 +35,48 @@ const SingleWomen = () => {
     const [data, setData] = useState([])
     const [size, setSize] = useState("");
     const [cart, setCart] = useState([]);
+    const nav = useNavigate()
 
     const toast = useToast();
     const statuses = ["success", "error", "warning", "info"];
     const positions = ["top"];
 
 
+    
+    const token = localStorage.getItem("userToken");
+    
     const handleSize = (payload) => {
-        console.log(payload)
-        setSize((prev) => prev = payload)
+        if(token){
+
+            console.log(payload)
+            setSize((prev) => prev = payload)
+            toast({
+                title: `You Select ${payload} Size          `,
+                position: positions,
+                status: statuses[3],
+                isClosable: true,
+                duration:1500
+              });
+        }else{
+            toast({
+                title: "Please Login",
+                position: positions,
+                status: statuses[2],
+                background:"red",
+                isClosable: true,
+                duration:1000
+              });
+              setTimeout(()=>{
+
+                  nav("/login")
+              },1400)
+        }
 
 
     }
+    // const token2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
 
-    const token1 = localStorage.getItem("userToken");
-    
-    const token2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
-
-    const token = token1 || token2
+    // const token = token1 || token2
 
     const handleCart = () => {
         
@@ -121,8 +145,13 @@ const SingleWomen = () => {
                 status: statuses[2],
                 background:"red",
                 isClosable: true,
-                duration:1500
+                duration:1000
               });
+              setTimeout(()=>{
+
+                  nav("/login")
+              },1400)
+
         }
     }
 
