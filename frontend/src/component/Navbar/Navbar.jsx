@@ -40,7 +40,7 @@ const Navbar = () => {
           <Box className={show ? styles.nav_menu_links : styles.nav_links}>
             <ul className={styles.ul_links}>
               <li>
-                <Link to="/">Women</Link>
+                <Link to="/womens">Women</Link>
                 <Box className={styles.women_menu}>
                   <Box id={styles.ethnic_wear}>
                     <button>Ethnic Wear</button>
@@ -102,7 +102,7 @@ const Navbar = () => {
                 </Box>
               </li>
               <li>
-                <Link to="/">Men</Link>
+                <Link to="/mens">Men</Link>
                 <Box className={styles.women_menu}>
                   <Box id={styles.ethnic_wear}>
                     <button>Top Wear</button>
@@ -288,16 +288,16 @@ const Navbar = () => {
                 </MenuButton>
                 <MenuList>
                   <MenuItem>
-                    <a href="/register">User Register</a>
+                    <Link to={'/signup'} >User Register</Link>
                   </MenuItem>
                   <MenuItem>
-                    <a href="/login">User Login</a>
+                    <Link to={'/login'} >User Login</Link>
                   </MenuItem>
                   <MenuItem>
-                    <a>Admin Register</a>
+                    <Link to={'/adminsignup'} >Admin Register</Link>
                   </MenuItem>
                   <MenuItem>
-                    <a>Admin Login</a>
+                    <Link to={'/adminlogin'} >Admin Login</Link>
                   </MenuItem>
                 </MenuList>
               </Menu>

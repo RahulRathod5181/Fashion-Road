@@ -16,7 +16,14 @@ export default function AdminNavbar() {
   // const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} position={'sticky'} top={0} >
+      <Box
+        bg={useColorModeValue("#e8e8e8")}
+        color={"black"}
+        fontWeight={500}
+        px={4}
+        position={"sticky"}
+        top={0}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Link to="/adminDashboard">
             <Box>Dashboard</Box>{" "}

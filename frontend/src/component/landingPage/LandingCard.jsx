@@ -32,14 +32,14 @@ const LandingCard = ({ poster, profile, seller, followers, title, price,likes })
     
   };
   return (
-    <Card maxW="sm" border={'1px solid black '}>
+    <Card maxW="sm" border={'1px solid gray.400 '}>
       <CardBody>
         <Text
           maxBlockSize={5}
           fontWeight={600}
           color={"blackAlpha.900"}
           mb={"3"}
-          textAlign={'center'}
+          // textAlign={'center'}
         >
           {title}
         </Text>
