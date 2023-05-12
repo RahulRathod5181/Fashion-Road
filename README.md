@@ -30,7 +30,8 @@ TEAM MEMBER :- RAHUL RATHOD , KUNAL DEOTALE , ANIMESH GHOROI , RAHUL SINGH KUSHW
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-DEPLOY LINK :-
+DEPLOY LINK :- https://fashionroad-animesh-0041.vercel.app/
+BACKEND LINK :- https://clumsy-miniskirt-tuna.cyclic.app/
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ABOUT FASHION-ROAD :-
