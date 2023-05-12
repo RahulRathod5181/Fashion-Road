@@ -8,17 +8,19 @@ import OrderSucess from "./component/Rahul/PaymentPage/OrderSucess";
 import PaymentPage from "./component/Rahul/PaymentPage/PaymentPage";
 import { textTospeechFun } from "./component/Rahul/VoiceFun";
 import AdminUser from "./component/admin/admin user/AdminUser";
+import "./App.css"; 
 import AllRoutes from "./component/utility/AllRoutes";
-
+ 
+ 
 function App() {
+  
   return (
     <div className="App">
-      {/* <CartPage /> */}
-      {/* <PaymentPage /> */}
-      {/* <AdminUser /> */}
-      <AllRoutes />
       
-    </div>
+      <AllRoutes />
+ 
+    </div> 
+ 
   );
 }
 

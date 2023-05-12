@@ -10,6 +10,8 @@ import React, { useState } from "react";
 import CreditCard from "./CreditCard";
 import { useNavigate } from "react-router-dom";
 import { textTospeechFun } from "../VoiceFun";
+import { useDispatch } from "react-redux";
+import { deleteAll } from "../../../redux/CartReducer/action";
 
 let voices = window.speechSynthesis.getVoices()[3];
 console.log(voices);
@@ -24,6 +26,7 @@ const DebitCard = () => {
 
   const totalPrice = localStorage.getItem("totalPrice");
 
+  const dispatch = useDispatch()
   const navigate = useNavigate();
 
   const toast = useToast();
@@ -55,6 +58,10 @@ const DebitCard = () => {
       if (cvv && cvv.length === 3) {
         localStorage.removeItem("cvv");
         // alert("working");
+
+        dispatch(deleteAll)
+
+
         navigate("/orderSuccess");
       } else {
         // alert("Fill payment details");
