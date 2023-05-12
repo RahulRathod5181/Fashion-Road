@@ -15,7 +15,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
-import { loginData } from "../../redux/user/user login/action";
+import { loginData } from "../../redux/user/user login/action" ;
 
 const initialState = {
   email: "",
@@ -31,7 +31,7 @@ export default function Login() {
 
   const dispatch = useDispatch();
 
-  const { isAuth, token } = useSelector((store) => {
+  const { isAuth, token,isError } = useSelector((store) => {
     return store.userLoginReducer;
   });
 
@@ -62,7 +62,7 @@ export default function Login() {
       // ! CHEAKING PASSSWORD LENGTH IS NOT LESS THAN 8
     } else if (formState.password.length < 8) {
       toast({
-        title: "Password Is Wrong",
+        title: "Password Must Be 8 Digit",
         position: positions,
         status: statuses[2],
         isClosable: true,
@@ -70,18 +70,24 @@ export default function Login() {
 
       //! ALLCLEAR GO FURTHER
     } else {
-      dispatch(loginData(formState)).then(() => {
-        // navigate(location.state, { replace: true });
-      });
+
+      dispatch(loginData(formState)).then(()=>{
+        console.log(isError)
+        
+          toast({
+            title: "Successfully Login",
+            position: positions,
+            status: statuses[0],
+            isClosable: true,
+          })
+        setFormState(initialState);
+        navigate("/")
+        window.location.reload()
+      })
+
       // console.log(formState);
-      setFormState(initialState);
-      toast({
-        title: "Successfully Login",
-        position: positions,
-        status: statuses[0],
-        isClosable: true,
-      });
-      navigate("/");
+      
+      
     }
   };
   return (

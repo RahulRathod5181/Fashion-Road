@@ -46,13 +46,13 @@ const AllRoutes = () => {
       <Route path="/adminsignup" element={<AdminSignup />} />
       <Route path="/" element={<Landing />} />
       <Route path="/adminAddproduct" element={<Addproduct />} />
-      <Route path="/adminDashboard" element={<Dashboard />} />
+      <Route path="/adminDashboard" element={<Dashboard />}  />
       <Route path="/adminProduct" element={<Product />} />
       <Route path="/editProduct/:id" element={<EditProduct />} />
       <Route path="/shirtProduct" element={<Shirt />} />
       <Route path="/sareeProduct" element={<Sarees />} />
       <Route path="/kurtaProduct" element={<Kurta />} />
-      <Route path="/footwereProduct" element={<Footwere />} />
+      <Route path="/footwereProduct" element={<Footwere />}  />
       <Route path="/dressProduct" element={<Dress />} />
       <Route path="/accessoriesProduct" element={<Accessories />} />
       <Route path="/cart" element={<CartPage />} />

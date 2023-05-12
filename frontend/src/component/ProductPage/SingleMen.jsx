@@ -18,16 +18,18 @@ import { useToast } from '@chakra-ui/react';
 const token = JSON.parse(localStorage.getItem("userToken"));
 // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJoYmgiLCJsYXN0TmFtZSI6ImZndCIsInVzZXJJRCI6IjY0NWUyODQ4ZjEwYzc1NTFkN2E0N2IzMSIsImlhdCI6MTY4Mzg5MjMwOX0.aVW5RSAkLDko0lUqORc9zYEtqlhFtJrKCU_XDM-WJMc"
 
-const getCart = () => {
-    // console.log(token)
-     return axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, {headers: {Authorization: token } })
-    //  .then((res)=>{
-    //     console.log(res.data)
+ 
+// const getCart = () => {
+//     // console.log(token)
+//     return axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, { headers: { Authorization: token } })
+//     //  .then((res)=>{
+//     //     console.log(res.data)
 
-    // }).catch((err)=>{
-    //     console.log(err)
-    // })
-}
+//     // }).catch((err)=>{
+//     //     console.log(err)
+//     // })
+// }
+ 
 
 const postCart = (token, obj) => {
     return axios.post(`https://clumsy-miniskirt-tuna.cyclic.app/cart/add`, obj, { headers: { Authorization: token } })
@@ -40,6 +42,7 @@ const SingleWomen = () => {
     const [data, setData] = useState([])
     const [size, setSize] = useState("");
     const [cart, setCart] = useState([]);
+    const [check,setCheck] = useState(false)
     const nav = useNavigate()
 
     const toast = useToast();
@@ -47,10 +50,10 @@ const SingleWomen = () => {
     const positions = ["top"];
 
 
-    
-    
+ 
     const handleSize = (payload) => {
-        if(token){
+        const token = JSON.parse(localStorage.getItem("userToken"));
+        if (token) {
 
             console.log(payload)
             setSize((prev) => prev = payload)
@@ -59,21 +62,21 @@ const SingleWomen = () => {
                 position: positions,
                 status: statuses[3],
                 isClosable: true,
-                duration:1500
-              });
-        }else{
+                duration: 1500
+            });
+        } else {
             toast({
                 title: "Please Login",
                 position: positions,
                 status: statuses[2],
-                background:"red",
+                background: "red",
                 isClosable: true,
-                duration:1000
-              });
-              setTimeout(()=>{
+                duration: 1000
+            });
+            setTimeout(() => {
 
-                  nav("/login")
-              },1400)
+                nav("/login")
+            }, 1400)
         }
 
 
@@ -83,64 +86,84 @@ const SingleWomen = () => {
     // const token = token1 || token2
 
     const handleCart = () => {
-        
+        const token = JSON.parse(localStorage.getItem("userToken"));
+        setCheck(!check)
         if (token) {
-            
+ 
             // console.log("hellocart")
             let obj = data[0]
+
             obj.quantity = 1;
             obj.size = size;
-            // console.log(obj)
-            getCart().then((res) => {
-                // console.log(res.data)
-                setCart(res.data)
-            }).catch(err => console.log(err))
-                .finally(() => {
+ 
+
+                // setCart((prev)=>prev=res.data)
+ 
                     let flag = true;
                     for (let x of cart) {
-                        if (x._id == obj._id) {
+                        if (x.Price == obj.Price && x.ogPrice==obj.ogPrice && x.size==obj.size) {
                             flag = false
                             break
                         }
                     }
                     if (flag && obj.size) {
+                        console.log(cart)
+                        console.log(obj.size)
                         console.log("you can post")
                         console.log(token)
                         delete obj._id
-                        console.log(obj)
+ 
+                        
 
+                        // console.log(obj)
+                        // const newObj = {
+                        //     Price: obj.price,
+                        //     brand: obj.brand,
+                        //     discount: obj.discount,
+                        //     gender: obj.gender,
+                        //     image: obj.image,
+                        //     offerType: obj.offerType,
+                        //     ogPrice: obj.ogPrice,
+                        //     quantity: 1,
+                        //     size:obj.size,
+                        //     title:obj.title
+                        // }
                         postCart(token, obj).then((res) => {
                             console.log(res.data)
-                            
+                            window.location.reload()
+                            obj.size=""
+ 
                         }).catch(err => console.log(err))
                         toast({
                             title: "Added To Cart",
                             position: positions,
                             status: statuses[0],
                             isClosable: true,
-                            duration:1500
-                          });
+ 
+                            duration: 1500
+                        });
+ 
 
                     } else if (!obj.size) {
                         toast({
                             title: "Select The Size",
                             position: positions,
                             status: statuses[2],
-                            color:"red",
+                            color: "red",
                             isClosable: true,
-                            duration:1500
-                          });
-                    }else{
+                            duration: 1500
+                        });
+                    } else {
                         toast({
                             title: "Already in the Cart",
                             position: positions,
                             status: statuses[2],
-                            background:"red",
+                            background: "red",
                             isClosable: true,
-                            duration:1500
-                          });
+                            duration: 1500
+                        });
                     }
-                })
+                
 
 
 
@@ -151,14 +174,15 @@ const SingleWomen = () => {
                 title: "Please Login",
                 position: positions,
                 status: statuses[2],
-                background:"red",
+                background: "red",
                 isClosable: true,
-                duration:1000
-              });
-              setTimeout(()=>{
+                duration: 1000
+            });
+            console.log(token)
+            setTimeout(() => {
 
-                  nav("/login")
-              },1400)
+                nav("/login")
+            }, 1400)
 
         }
     }
@@ -173,8 +197,13 @@ const SingleWomen = () => {
             setData((prev) => prev = res.data)
             // setSave(+data[0].ogPrice - (+data[0].Price))
         }).catch((err) => console.log(err))
-    }, [])
-    
+ 
+        axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart`, { headers: { Authorization: token } }).then((res)=>{
+            setCart((prev)=>prev=res.data)
+        }).catch((err)=>console.log(err))
+    }, [check,size])
+
+ 
     // console.log(data)
 
     if (data.length) {
