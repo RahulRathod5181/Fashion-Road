@@ -18,12 +18,14 @@ MENS PAGE
 
 
 
+SINGLE PRODUCT PAGE 
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/6745a242-09ba-4696-87c3-c0da97773ba9)
 
 
 
 
+CART PAGE 
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/9bf6dc10-f85e-453e-9a78-7425cd5dec10)
 
@@ -31,7 +33,7 @@ MENS PAGE
 
 
 
-
+PAYMENT PAGE 
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/3f2fceb7-9724-4a09-867f-642c1373aa91)
 
