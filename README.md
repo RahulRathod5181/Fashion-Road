@@ -2,7 +2,7 @@
 
 # Clone of Lime-Road.Com
 
-Limeroad is an Indian online marketplace, owned by A. M. Marketplaces Pvt Ltd. The company is based in Gurugram, Haryana. It is India's first women's social shopping website. It deals in clothing and accessories for women, men and kids.
+Fashion Road is a cloned website of Limeroad, it is E-Commerce platform. It focuses on clothing and accessories for women, men and kids. The portal allows its users to create their own look on a virtual scrapbook by using its products and also allows users to earn from the scrapbook they create.
 
 
 ![Fashion-Road](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/112802532/3b932f1a-9798-4fb8-9ad1-69abc31db607)
