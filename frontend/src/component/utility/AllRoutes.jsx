@@ -29,13 +29,17 @@ import PrivateUserRoute from "./PrivateUserRoute";
 import MensProduct from "../ProductPage/MensProduct";
 import WomensProduct from "../ProductPage/WomensProduct";
 import SingleWomen from "../ProductPage/SingleWomen";
+import SingleMen from "../ProductPage/SingleMen";
 
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/mens" element={<MensProduct />}></Route>
-      <Route path="/womens" element={<WomensProduct />}></Route>
-      <Route path="womens/:id" element={<SingleWomen />}></Route>
+
+      <Route path="/mens" element={<MensProduct/>}></Route>
+      <Route path="/womens" element={<WomensProduct/>}></Route>
+      <Route path="womens/:id" element={<SingleWomen/>}></Route>
+      <Route path="mens/:id" element={<SingleMen/>}></Route>
+
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
