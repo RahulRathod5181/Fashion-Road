@@ -170,7 +170,7 @@ const SingleWomen = () => {
                 isClosable: true,
                 duration: 1000
             });
-            console.log(token)
+ 
             setTimeout(() => {
 
                 nav("/login")
