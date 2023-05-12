@@ -56,9 +56,11 @@ const SingleMen = () => {
     }
 
 
-    // const token = localStorage.getItem("userToken")
+    const token1 = localStorage.getItem("userToken");
     
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
+    const token2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJkZGQiLCJsYXN0TmFtZSI6Im1hbGUiLCJ1c2VySUQiOiI2NDViNTAxOTk0ZmZmM2ZiZmQzMmVkYmUiLCJpYXQiOjE2ODM3MDc5MzZ9.u3tjrkJIW6cvaalHnRGWd26CmThbr32CI-UVJZXJ9tE"
+
+    const token = token1 || token2
     
 
     const handleCart = () => {
