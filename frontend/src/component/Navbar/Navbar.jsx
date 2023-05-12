@@ -28,6 +28,18 @@ const Navbar = () => {
     navigate("/");
   };
 
+const submitLogout=()=>{
+  localStorage.removeItem("userToken")
+  toast({
+    title: "Logout Successful",
+    position: "top",
+    status: "success",
+    isClosable: true,
+  });
+  window.reload()
+}
+
+
   return (
     <Box pb="28" position={"fixed"} top={0} left={0} zIndex={"999"}>
       <Box className={styles.navbar_container}>
@@ -298,6 +310,9 @@ const Navbar = () => {
                   </MenuItem>
                   <MenuItem>
                     <Link to={'/adminlogin'} >Admin Login</Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link  onClick={submitLogout} >Logout</Link>
                   </MenuItem>
                 </MenuList>
               </Menu>

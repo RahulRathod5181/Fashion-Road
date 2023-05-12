@@ -37,36 +37,64 @@ adminRouter.post("/add", async (req, res) => {
 });
 
 //admin-login
-adminRouter.post("/login", async (req, res) => {
-  const { email, password } = req.body;
+// adminRouter.post("/login", async (req, res) => {
+//   const { email, password } = req.body;
 
-  try {
-    let admin = await adminModel.find({ email });
-    if (admin.length > 0) {
-      const passMatch = await bcrypt.compare(password, admin[0].password);
+//   try {
+//     let admin = await adminModel.find({ email });
+//     if (admin.length > 0) {
+//       const passMatch = await bcrypt.compare(password, admin[0].password);
 
-      if (passMatch) {
-        const token = jwt.sign(
-          {
-            adminID: admin[0]._id,
-            exp: Math.floor(Date.now() / 1000) + 60 * 60,
-          },
-          "admin"
-        );
-        res.status(200).send({
-          "msg": "Login Successfull",
-          token: token,
-        });
-      } else {
-        res.status(400).send({ "msg": "Wrong Credential" });
+//       if (passMatch) {
+//         const token = jwt.sign(
+//           {
+//             adminID: admin[0]._id,
+//             exp: Math.floor(Date.now() / 1000) + 60 * 60,
+//           },
+//           "admin"
+//         );
+//         res.status(200).send({
+//           "msg": "Login Successfull",
+//           token: token,
+//         });
+//       } else {
+//         res.status(400).send({ "msg": "Wrong Credential" });
+//       }
+//     } else {
+//       res.status(400).send({ "msg": "Wrong Credential" });
+//     }
+//   } catch (error) {
+//     res.status(400).send({ "msg": error.message });
+//   }
+// });
+
+
+
+adminRouter.post("/login",async(req,res)=>{
+  const {password,email}=req.body
+      const user=await adminModel.findOne({email})
+      // console.log(user);
+      if(user){
+          try {
+              bcrypt.compare(password, user.password, (err, result)=> {
+                 if(result){
+                  const token=jwt.sign({userID:user._id }, "admin")
+                      res.send({"msg":"login successful","token":token})
+                    
+                 }else{
+                  res.status(400).send({"msg":"Incorrect password!"})
+                 }
+              });
+              
+          } catch (error) {
+              res.send(error)
+          }
+
+      }else{
+          res.status(400).send({"msg":"User not found!"})
       }
-    } else {
-      res.status(400).send({ "msg": "Wrong Credential" });
-    }
-  } catch (error) {
-    res.status(400).send({ "msg": error.message });
-  }
-});
+  
+})
 
 //update an admin details
 adminRouter.patch("/update/:adminID", async (req,res)=>{
