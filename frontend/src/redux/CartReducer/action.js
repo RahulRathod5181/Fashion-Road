@@ -2,13 +2,14 @@ import { baseUrl } from "../../component/Rahul/Url";
 import { GET_DATA, GET_DATA_ERROR, GET_DATA_REQUEST } from "./actionTypes";
 import axios from "axios";
 
-// const token = localStorage.getItem('token')
-const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0dHQiLCJsYXN0TmFtZSI6InNzcyIsInVzZXJJRCI6IjY0NWRmM2I4ZTg4MTQyZTY0MzJlNmFmNiIsImlhdCI6MTY4Mzg3ODg0Nn0.HJfRZnGRmkRV7vRPEPHUz3ZUkoVvrXaW49FjnLmn5F4`;
+const token = JSON.parse(localStorage.getItem('userToken'))
+// const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJvbyIsImxhc3ROYW1lIjoicHAiLCJ1c2VySUQiOiI2NDVlMmNkY2YxMGM3NTUxZDdhNDdiYjIiLCJpYXQiOjE2ODM4OTM0ODJ9.lYmPR9dz-OjPUPhD4CVW_SPZSoDItoE9yEyBTs7lA1c`;
 
 export const getCartProducts = (dispatch) => {
+  console.log(token);
   dispatch({ type: GET_DATA_REQUEST });
 
-  axios
+  return axios
     .get(`${baseUrl}/cart`, { headers: { Authorization: token } })
      
     .then((res) => {
@@ -54,12 +55,13 @@ export const deleteCartProduct = (id) => (dispatch) => {
 
 export const deleteAll = (dispatch) => {
     dispatch({ type: GET_DATA_REQUEST });
-  
+    console.log(token)
+
     axios
-      .get(`${baseUrl}/cart/delete`, { headers: { Authorization: token } })
+      .delete(`${baseUrl}/cart/delete`, { headers: { Authorization: token } })
       // axios.get(`https://clumsy-miniskirt-tuna.cyclic.app/cart/dummy`)
       .then((res) => {
-        dispatch({ type: GET_DATA, payload: res.data });
+        dispatch({ type: GET_DATA,payload:[]});
       })
       .catch((err) => {
         dispatch({ type: GET_DATA_ERROR });
