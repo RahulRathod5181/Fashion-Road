@@ -13,10 +13,12 @@ const AccessoriesProduct = () => {
   useEffect(() => {
     dispatch(accessoriesProducts);
   }, []);
+
   if (isLoading) {
     return (
       <Heading  size={'2xl'} mt={'10%'} textAlign={'center'} >Loading....</Heading>
-    )
+        // <Spinner size="xl" alignContent={'center'} alignItems={'center'} />
+    );
   }
   return (
     <Grid
