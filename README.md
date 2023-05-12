@@ -1,14 +1,17 @@
 # finicky-scarecrow-1328
 
+LANDING PAGE 
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/0e103113-59ce-4ba0-808c-e0032738a6c0)
 
 
+WOMENS PAGE
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/3f760768-503c-4f83-a5fd-55ab7ff58f9c)
 
 
 
+MENS PAGE
 
 ![image](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/95977696/50970ddf-7e9d-4845-8083-31fc7370c65a)
 
