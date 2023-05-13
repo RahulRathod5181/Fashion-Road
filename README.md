@@ -24,7 +24,7 @@ TEAM MEMBER :- RAHUL RATHOD , KUNAL DEOTALE , ANIMESH GHOROI , RAHUL SINGH KUSHW
 <img src="https://custom-icon-badges.demolab.com/badge/-Chakra UI%20-black?style=for-the-badge&logoColor=teal&logo=chakra_ui" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-Node_Js%20-black?style=for-the-badge&logoColor=blue&logo=react" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-MongoDB%20-black?style=for-the-badge&logoColor=blue&logo=react" style="max-width: 100%;"/>
-  <img src="https://custom-icon-badges.demolab.com/badge/-Express-Js%20-black?style=for-the-badge&logoColor=blue&logo=react" style="max-width: 100%;"/>
+ <img src="https://custom-icon-badges.demolab.com/badge/-express%20-black?style=for-the-badge&logoColor=blue&logo=react" style="max-width: 100%;"/>
 </div>
 
 
