@@ -20,11 +20,11 @@ TEAM MEMBER :- RAHUL RATHOD , KUNAL DEOTALE , ANIMESH GHOROI , RAHUL SINGH KUSHW
 <img src="https://custom-icon-badges.demolab.com/badge/-HTML5%20-black?style=for-the-badge&logoColor=orange&logo=html5" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-CSS3%20-black?style=for-the-badge&logoColor=blue&logo=css3" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-Axios%20-black?style=for-the-badge&logoColor=pink&logo=axios" style="max-width: 100%;"/>
-<img src="https://custom-icon-badges.demolab.com/badge/-styled_components%20-black?style=for-the-badge&logoColor=blue&logo=styles" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-JSON%20-black?style=for-the-badge&logoColor=blue&logo=json" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-Chakra UI%20-black?style=for-the-badge&logoColor=teal&logo=chakra_ui" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-Node_Js%20-black?style=for-the-badge&logoColor=blue&logo=react" style="max-width: 100%;"/>
 <img src="https://custom-icon-badges.demolab.com/badge/-MongoDB%20-black?style=for-the-badge&logoColor=blue&logo=react" style="max-width: 100%;"/>
+  <img src="https://custom-icon-badges.demolab.com/badge/-Express-Js%20-black?style=for-the-badge&logoColor=blue&logo=react" style="max-width: 100%;"/>
 </div>
 
 
