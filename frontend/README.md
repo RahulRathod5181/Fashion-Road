@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+<h1>FashionRoad ( Clone - LimeRoad.com )</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FashionRoad is an Indian e-commerce website that offers a wide range of fashion and lifestyle products for men, women, and kids. The website was launched in 2023 and has since become a popular destination for online shopping . FashionRoad offers a unique shopping experience with its scrapbook feature, where users can create their own styleboards and share them with other users. The website also offers a variety of payment options and fast delivery . In addition to fashion and lifestyle products.
 
-## Available Scripts
+![Fashion-Road](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/112802532/3b932f1a-9798-4fb8-9ad1-69abc31db607)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## [Deployed Link For Frontend](https://fashionroad-animesh-0041.vercel.app/) 
+## [Deployed Link For Backend](https://clumsy-miniskirt-tuna.cyclic.app/) 
+ 
+## Tech Stacks Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React JS
+- Redux
+- Axios
+- Deployed API 
+- Chakra UI
+- HTML & CSS
+- JavaScript
+- Nodejs
+- Expressjs
+- MongoDB
+- Jsonwebtoken
+- Cors
+- bcryptjs
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here's the feature's included in this project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🌐 FULL Ecommerce functionality which includes both back-end and front-end
+- 👨‍👩‍👧‍👦 Register or login as an user and admin.
+- 📦 Landing Page, Products Page
+- 📝 Apply filters & sort for Single Product Page.
+- 🛒 Seperate Cart for individual user with sound alert validation
+- 💳 Checkout Page with sound alert validation 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Collaborative Project built by 5 developers in 5 days
+ 
+ * Rahul Rathod :-  Product Page (Mens, Womens, Single Product Page).
+ * Rahul Singh Kushwah :- Cart Page, Checkout and Payment Page.
+ * Kunal Deotale :- Login & Signup (Users and Admin), Landing Page
+ * Animesh Ghoroi :-Backend Side
+ * Sourav Lahiri :- Backend Side, Navbar
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  
+  
+  
+# Overview Of Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Home Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![homepage](https://user-images.githubusercontent.com/95977696/238076594-0e103113-59ce-4ba0-808c-e0032738a6c0.png)
 
-## Learn More
+## Sign In 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![signIn](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/112858970/3a3019c5-2628-49f1-9481-a7b1b2542219)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Signup Page
 
-### Code Splitting
+![logout](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/112858970/415d30a6-838c-439b-9f77-9edeec839ac0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Product Page ( Mens Category )
 
-### Analyzing the Bundle Size
+![menspage](https://user-images.githubusercontent.com/95977696/238076707-50970ddf-7e9d-4845-8083-31fc7370c65a.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Product Page ( Womens Category )
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![womenspage](https://user-images.githubusercontent.com/95977696/238076657-3f760768-503c-4f83-a5fd-55ab7ff58f9c.png)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Single Product Page ( Womens Category )
 
-### Deployment
+![singleproductpage](https://user-images.githubusercontent.com/95977696/238076798-6745a242-09ba-4696-87c3-c0da97773ba9.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Add To Cart Page
+ 
+![addtocart](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/112858970/14fea950-24df-4e57-a137-16cac26cf289)
 
-### `npm run build` fails to minify
+## Address Page & Payment Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![buynow](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/112858970/3f9333f6-7ad5-461b-8f68-639389bfac04)
+
+
+## Order Complete Page
+
+![ordercompletepage](https://github.com/RahulRathod5181/finicky-scarecrow-1328/assets/112858970/4c483516-8894-484b-87d8-16f4c8106d8d)
+
+## Admin Dashboard
+
+![adminpage](https://user-images.githubusercontent.com/95977696/238077448-7c3e40cf-cfa8-4611-960f-22ac771df5ac.png)
+
+
+## Admin Product Form
+
+![adminproductform](https://user-images.githubusercontent.com/95977696/238077497-9819254d-29da-4af3-8f04-51e54a7a0acf.png)
+
+
+## Admin Side Product
+
+![adminsideproduct](https://user-images.githubusercontent.com/95977696/238077550-89b07a06-8102-4003-ad9d-243cf236f5e0.png)
