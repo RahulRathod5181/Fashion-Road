@@ -130,7 +130,7 @@
     height: 20px;
     border-radius: 100%;
     font-size: 15px;
-    background-color: rgb(240, 8, 8);
+    /* color: rgb(240, 8, 8); */
     color: white;
     padding-top: 4px;
   }
